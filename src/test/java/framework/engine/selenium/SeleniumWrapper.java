@@ -71,4 +71,10 @@ public class SeleniumWrapper {
         return driver.getTitle();
     }
 
+    //Añdadimos más métodos útiles
+
+
+
+
+
 }
