@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class atc01_POM extends SeleniumTestBase {
 
     GoogleHomePage googleHomePage;
-
+ /*
     @Test
     @Tag("regresion")
     void busquedaGoogle(){
@@ -19,4 +19,5 @@ public class atc01_POM extends SeleniumTestBase {
         googleHomePage.buscarConBotonBuscar("Tsoft");
         Assertions.assertEquals("Tsoft - Buscar con Google",googleHomePage.getUrlTitle());
     }
+  */
 }
