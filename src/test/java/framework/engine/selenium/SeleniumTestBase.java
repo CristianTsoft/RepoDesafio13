@@ -6,6 +6,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.Properties;
 
@@ -21,15 +25,25 @@ public class SeleniumTestBase {
     }
 
     @BeforeEach
-    void webDriverSetup(){
+    void webDriverSetup() {
         String browserName = properties.getProperty("browser");
         driverFactory = new DriverFactory();
         driver = driverFactory.inicializarDriver(browserName);
     }
 
-    @AfterEach
-    void close(){
-        driver.quit();
+    void preTests() {
+        driver = new ChromeDriver();
+        PageFactory.initElements(driver, this);
+        driver.get("https://www.rumbo.es/");
+
+        // Maximizar la página
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
     }
+
+    @AfterEach
+    void close() {
+        driver.quit();
+    } //para cerrar la página.
 
 }
