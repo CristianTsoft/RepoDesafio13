@@ -1,13 +1,9 @@
 package aut.testcreation.testcases;
 
 import aut.testcreation.pages.GoogleHomePage;
-import framework.engine.selenium.DriverFactory;
-import framework.engine.selenium.SeleniumTestBase;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import framework.engine.selenium.SeleniumTestsAnaBase;
 
-public class atc01_POM extends SeleniumTestBase {
+public class atc01_POM extends SeleniumTestsAnaBase {
 
     GoogleHomePage googleHomePage;
  /*

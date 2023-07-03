@@ -5,6 +5,7 @@ import io.qameta.allure.Description;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.Properties;
 
-public class SeleniumTestBase {
+public class SeleniumTestsAnaBase {
 
     private DriverFactory driverFactory;
     WebDriver driver;
@@ -42,6 +43,7 @@ public class SeleniumTestBase {
     }
 
     @AfterEach
+
     void close() {
         driver.quit();
     } //para cerrar la página.

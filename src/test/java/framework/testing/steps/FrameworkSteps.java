@@ -1,15 +1,15 @@
 package framework.testing.steps;
 
-import framework.engine.bdd.CucumberBaseTestRunner;
+import framework.engine.bdd.CucumberBaseTestsAnaRunner;
 import io.cucumber.java8.En;
 import org.junit.jupiter.api.Assertions;
 
-public class FrameworkSteps extends CucumberBaseTestRunner implements En {
+public class FrameworkSteps extends CucumberBaseTestsAnaRunner implements En {
 
     public FrameworkSteps(){
 
-        Before(1,CucumberBaseTestRunner::setUp);
-        After(CucumberBaseTestRunner::tearDown);
+        Before(1, CucumberBaseTestsAnaRunner::setUp);
+        After(CucumberBaseTestsAnaRunner::tearDown);
 
         Given("que quiero que se ejecute correctamente este test", () -> {
             // Write code here that turns the phrase above into concrete actions

@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
         tags = {"@regresion and @aut"},
         features = {"src/test/java/aut/testcreation/features"})
 @CommonsLog
-public class GoogleTestRunner {
+public class GoogleTestsAnaRunner {
 
     public static WebDriver driver;
     private static DriverFactory driverFactory;
