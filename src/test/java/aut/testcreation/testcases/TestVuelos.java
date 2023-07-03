@@ -19,8 +19,7 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
         homepage.irAVuelos();
-        vuelospage.Destino();
-
+        vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelospage.Busqueda();
     }
 

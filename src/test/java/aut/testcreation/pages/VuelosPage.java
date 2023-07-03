@@ -23,6 +23,7 @@ public class VuelosPage extends SeleniumWrapper {
 
     public void SoloIda(){
         clickear(esperarPorElemento(btnSoloIda));
+
     }
 
     public void Destino(){
@@ -45,6 +46,14 @@ public class VuelosPage extends SeleniumWrapper {
     }
     public void Multidestino(){
         clickear(esperarPorElemento(btnMultidestino));
+    }
+
+    public void completarOrigenDestino(String origen,String destino){
+
+        agregarTexto((btnOrigen), origen);
+        esperarXSegundos(5000);
+        agregarTexto((btnDestino), destino);
+        esperarXSegundos(5000);
     }
 
 }
