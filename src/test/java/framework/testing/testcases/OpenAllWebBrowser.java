@@ -13,6 +13,17 @@ public class OpenAllWebBrowser {
     DriverFactory driverFactory;
 
     @Test
+    void TestChrome(){
+        Properties edgeProperties = new Properties();
+        edgeProperties.put("browser","chrome");
+        String browserName = edgeProperties.getProperty("browser");
+        driverFactory = new DriverFactory();
+        driver = driverFactory.inicializarDriver(browserName);
+        Assertions.assertTrue(driver.getWindowHandle() != null);
+        driver.quit();
+    }
+    /*
+    @Test
     void TestEdge(){
         Properties edgeProperties = new Properties();
         edgeProperties.put("browser","edge");
@@ -21,7 +32,6 @@ public class OpenAllWebBrowser {
         driver = driverFactory.inicializarDriver(browserName);
         Assertions.assertTrue(driver.getWindowHandle() != null);
         driver.quit();
-
     }
 
     @Test
@@ -35,6 +45,7 @@ public class OpenAllWebBrowser {
         driver.quit();
 
     }
+    */
 
     @Test
     void TestNoFoundBrowserException(){

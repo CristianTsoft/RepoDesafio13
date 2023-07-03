@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import static framework.engine.utils.Constants.BASE_URL_AUT;
 
+
 public class GoogleHomePage extends SeleniumWrapper {
 
     public GoogleHomePage(WebDriver driver) {
@@ -17,6 +18,7 @@ public class GoogleHomePage extends SeleniumWrapper {
     By btnBuscarConGoogleLocator = By.name("btnK");
     By btnVoyATenerSuerteLocator = By.name("btnI");
 
+    /*
     //methods
     public void buscarConBotonBuscar(String busqueda){
         write(busqueda,barraBusquedaLocator);
@@ -32,5 +34,5 @@ public class GoogleHomePage extends SeleniumWrapper {
         navigateTo(BASE_URL_AUT);
     }
 
-
+*/
 }
