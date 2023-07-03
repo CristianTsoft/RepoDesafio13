@@ -1,9 +1,10 @@
 package aut.testcreation.testcases;
 
 import aut.testcreation.pages.Homapage;
-import framework.engine.selenium.SeleniumTestsAnaBase;
 
-public class atc01_POM extends SeleniumTestsAnaBase {
+
+
+public class atc01_POM  {
 
     Homapage googleHomePage;
  /*
