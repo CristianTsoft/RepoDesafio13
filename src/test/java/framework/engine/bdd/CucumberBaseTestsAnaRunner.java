@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
         tags = {""},
         features = {"src/test/java/framework/testing/features"})
 @CommonsLog
-public class CucumberBaseTestRunner {
+public class CucumberBaseTestsAnaRunner {
 
     public static WebDriver driver;
     private static DriverFactory driverFactory;

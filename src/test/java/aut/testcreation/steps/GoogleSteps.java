@@ -1,18 +1,18 @@
 package aut.testcreation.steps;
-import aut.testcreation.pages.GoogleHomePage;
-import aut.testplan.sprint.GoogleTestRunner;
+import aut.testcreation.pages.HomePage;
+import aut.testplan.sprint.GoogleTestsAnaRunner;
 import io.cucumber.java8.En;
 import org.junit.jupiter.api.Assertions;
 
 
-public class GoogleSteps extends GoogleTestRunner implements En{
+public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
 
-        GoogleHomePage googleHomePage;
+        HomePage googleHomePage;
 
-        Before(2, GoogleTestRunner::setUp);
-        After(GoogleTestRunner::tearDown);
+        Before(2, GoogleTestsAnaRunner::setUp);
+        After(GoogleTestsAnaRunner::tearDown);
 
         Given("que estoy en el Home de Google", () -> Assertions.assertTrue(true));
 

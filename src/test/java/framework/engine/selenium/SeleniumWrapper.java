@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URL;
 import java.util.List;
 
 public class SeleniumWrapper {
@@ -185,6 +186,10 @@ public class SeleniumWrapper {
     public void scrollingDownElement(WebElement elemento){
         js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", elemento);
+    }
+
+    public void navigateTo(String url){
+        driver.navigate().to(url);
     }
 
 
