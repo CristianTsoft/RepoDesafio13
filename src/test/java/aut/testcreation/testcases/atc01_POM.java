@@ -1,11 +1,11 @@
 package aut.testcreation.testcases;
 
-import aut.testcreation.pages.GoogleHomePage;
+import aut.testcreation.pages.Homapage;
 import framework.engine.selenium.SeleniumTestsAnaBase;
 
 public class atc01_POM extends SeleniumTestsAnaBase {
 
-    GoogleHomePage googleHomePage;
+    Homapage googleHomePage;
  /*
     @Test
     @Tag("regresion")
