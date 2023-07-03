@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class Test{
+public class Test {
 
     @FindBy(xpath = "xpath=//a[contains(text(),'Vuelos')]")
     WebElement btnVuelos;
@@ -26,16 +26,16 @@ public class Test{
         @org.junit.jupiter.api.Test
         void browserActions() throws InterruptedException {
 
-        //Hacer click en la pestaña "Vuelos"
-        btnVuelos.click();
-        Thread.sleep(10000);
-        //Hacer click en el botón de búsqueda
-        btnBusqueda.click();
-        Thread.sleep(10000);
+            //Hacer click en la pestaña "Vuelos"
+            btnVuelos.click();
+            Thread.sleep(10000);
+            //Hacer click en el botón de búsqueda
+            btnBusqueda.click();
+            Thread.sleep(10000);
 
-        //Hacer click la pestaña "Más rápido"
-        //click();
-        Thread.sleep(10000);
+            //Hacer click la pestaña "Más rápido"
+            //click();
+            Thread.sleep(10000);
             //Ingresar a Rumbo.es
             driver.get("https://www.rumbo.es/");
 
@@ -48,3 +48,4 @@ public class Test{
             //Hacer click la pestaña "Más rápido"
         }
     }
+}
