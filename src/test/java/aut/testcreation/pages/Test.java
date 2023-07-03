@@ -46,13 +46,12 @@ class Test {
         //Hacer click en la pestaña "Vuelos"
         btnVuelos.click();
         Thread.sleep(10000);
-
         //Hacer click en el botón de búsqueda
         btnBusqueda.click();
         Thread.sleep(10000);
 
         //Hacer click la pestaña "Más rápido"
-        .click();
+        click();
         Thread.sleep(10000);
 
     }
