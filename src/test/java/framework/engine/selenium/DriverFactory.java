@@ -22,7 +22,7 @@ public class DriverFactory {
 
         System.out.println("browser value is: "+browser);
         switch (browser) {
-            case "firefox":
+            /*case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 hiloLocal.set(new FirefoxDriver());
                 getDriver().manage().deleteAllCookies();
@@ -36,6 +36,8 @@ public class DriverFactory {
                 getDriver().manage().window().maximize();
                 getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
                 return getDriver();
+                /*
+             */
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 hiloLocal.set(new ChromeDriver());
