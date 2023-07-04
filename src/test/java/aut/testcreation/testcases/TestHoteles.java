@@ -31,7 +31,7 @@ public class TestHoteles extends SeleniumTestBase {
 
     @AfterEach
     public void posTest(){
-
+        // driver.close();
     }
 
     @Test
