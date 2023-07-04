@@ -1,10 +1,9 @@
 package aut.testcreation.testcases;
 
-import aut.testcreation.pages.HomePage;
-import aut.testcreation.pages.VuelosPage;
-import aut.testcreation.pages.VuelosResults;
+import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -13,19 +12,38 @@ public class TestVuelos extends SeleniumTestBase {
 
     private HomePage homepage;
     private VuelosPage vuelospage;
-
     private VuelosResults vuelosresults;
-    @Test
-    public void RV001 () {
+
+    private VuelosFlex vuelosFlex;
+
+    @BeforeEach
+    public void preTest(){
         homepage = new HomePage(DriverFactory.getDriver());
         vuelospage = new VuelosPage(homepage.getDriver());
         vuelosresults = new VuelosResults(homepage.getDriver());
+        vuelosFlex = new VuelosFlex(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
+    }
+    @Test
+    public void RV001 () {
         homepage.irAVuelos();
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
-        vuelospage.Busqueda();
         vuelosresults.MasBarato();
     }
+
+    @Test
+    public void RV006 (){
+        homepage.irAVuelos();
+        vuelospage.BusquedaSoloIda("Barcelona" , "Roma");
+        vuelosresults.Unresultado();
+        vuelosFlex.Flexible();
+
+    }
+
+
+    
+
+
 
 }
