@@ -5,7 +5,6 @@ import aut.testcreation.pages.HotelesPage;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 
 public class TestHoteles extends SeleniumTestBase {
