@@ -79,6 +79,8 @@ public class HotelesPage extends SeleniumWrapper {
         Thread.sleep(2000);
     }
 
+    By btnHabitacion = By.xpath();
+
     public HotelesPage(WebDriver driver) {
         super(driver);
     }
