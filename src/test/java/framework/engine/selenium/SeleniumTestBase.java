@@ -13,6 +13,7 @@ public class SeleniumTestBase {
 
     private DriverFactory driverFactory;
     WebDriver driver;
+
     static Properties properties;
 
     @BeforeAll

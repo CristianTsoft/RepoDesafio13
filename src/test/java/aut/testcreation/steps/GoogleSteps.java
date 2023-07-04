@@ -1,4 +1,6 @@
 package aut.testcreation.steps;
+
+import aut.testcreation.pages.Homapage;
 import aut.testcreation.pages.HomePage;
 import aut.testplan.sprint.GoogleTestsAnaRunner;
 import io.cucumber.java8.En;
@@ -9,7 +11,8 @@ public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
 
-        HomePage googleHomePage;
+
+        Homapage googleHomePage;
 
         Before(2, GoogleTestsAnaRunner::setUp);
         After(GoogleTestsAnaRunner::tearDown);
