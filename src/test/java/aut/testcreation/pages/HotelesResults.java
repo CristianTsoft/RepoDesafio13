@@ -4,7 +4,6 @@ import framework.engine.selenium.SeleniumWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
 public class HotelesResults extends SeleniumWrapper {
 
 
@@ -167,3 +166,5 @@ public class HotelesResults extends SeleniumWrapper {
         Thread.sleep(2000);
     }
 }
+
+

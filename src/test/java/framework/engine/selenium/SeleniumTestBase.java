@@ -1,5 +1,8 @@
 package framework.engine.selenium;
 
+import aut.testcreation.pages.HomePage;
+import aut.testcreation.pages.HotelesPage;
+import aut.testcreation.pages.HotelesResults;
 import framework.engine.utils.LoadProperties;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,6 +19,7 @@ public class SeleniumTestBase {
 
     static Properties properties;
 
+
     @BeforeAll
     public static void LoadProperties() {
         properties = LoadProperties.loadProperties();
@@ -27,7 +31,7 @@ public class SeleniumTestBase {
         driverFactory = new DriverFactory();
         driver = driverFactory.inicializarDriver(browserName);
     }
-
+/*
     void preTests() {
         driver = new ChromeDriver();
         PageFactory.initElements(driver, this);
@@ -36,8 +40,9 @@ public class SeleniumTestBase {
         // Maximizar la página
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-
     }
+       */
+
  /*
     @AfterEach
     void close() {

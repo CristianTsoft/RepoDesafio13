@@ -21,39 +21,28 @@ public class VuelosPage extends SeleniumWrapper {
 
     //Métodos
 
-    public void SoloIda(){
-        clickear(esperarPorElemento(btnSoloIda));
-
-    }
-
-    public void Destino(){
-        clickear(esperarPorElemento(btnDestino));
-    }
-    public void Origen(){
-        clickear(esperarPorElemento(btnOrigen));
-    }
-    public void FechaIda(){
-        clickear(esperarPorElemento(btnFechaIda));
-    }
-    public void FechaVuelta(){
-        clickear(esperarPorElemento(btnFechaVuelta));
-    }
-    public void Pasajero(){
-        clickear(esperarPorElemento(btnPasajero));
-    }
-    public void Busqueda(){
-        clickear(esperarPorElemento(btnBusqueda));
-    }
-    public void Multidestino(){
-        clickear(esperarPorElemento(btnMultidestino));
-    }
-
     public void completarOrigenDestino(String origen,String destino){
 
         agregarTexto((btnOrigen), origen);
         esperarXSegundos(5000);
         agregarTexto((btnDestino), destino);
         esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnBusqueda));
+        esperarXSegundos(5000);
+    }
+
+    public void BusquedaSoloIda(String origen , String destino){
+
+        esperarXSegundos(5000);
+        agregarTexto((btnOrigen), origen);
+        esperarXSegundos(5000);
+        agregarTexto((btnDestino), destino);
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnSoloIda));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnBusqueda));
+        esperarXSegundos(5000);
+
     }
 
 }

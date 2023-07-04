@@ -1,5 +1,6 @@
 package aut.testcreation.steps;
 
+
 import aut.testcreation.pages.Homapage;
 import aut.testcreation.pages.HomePage;
 import aut.testplan.sprint.GoogleTestsAnaRunner;
@@ -11,9 +12,7 @@ public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
 
-
         Homapage googleHomePage;
-
         Before(2, GoogleTestsAnaRunner::setUp);
         After(GoogleTestsAnaRunner::tearDown);
 
