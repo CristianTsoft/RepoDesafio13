@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HotelesPage extends SeleniumWrapper {
+
         public HotelesPage(WebDriver driver) {
             super(driver);
         }
@@ -34,6 +35,7 @@ public class HotelesPage extends SeleniumWrapper {
 
         By btnSumar = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
 
+        By btnAnadirH = By.xpath("//button[normalize-space()='Añadir habitación']");
 
 
         public void completarBusqueda(String ciudad) throws InterruptedException {
@@ -79,4 +81,20 @@ public class HotelesPage extends SeleniumWrapper {
             Thread.sleep(2000);
         }
 
+        public void Habitaciones(String lugar) throws InterruptedException {
+            Thread.sleep(5000);
+            clickear(esperarPorElemento(btnUbicacion));
+            agregarTexto(esperarPorElemento(btnUbicacion), lugar);
+            clickear(esperarPorElemento(btnHuespedes));
+            Thread.sleep(5000);
+            for (int i = 0; i < 5; i++) {
+                clickear(esperarPorElemento(btnAnadirH));
+            }
+            Thread.sleep(5000);
+            clickear(esperarPorElemento(btnUbicacion));
+            Thread.sleep(5000);
+            clickear(esperarPorElemento(btnBusqueda));
+            Thread.sleep(2000);
+        }
 }
+
