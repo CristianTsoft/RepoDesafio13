@@ -36,10 +36,11 @@ public class HomePage extends SeleniumWrapper {
     }
 
 
-    public void IngresarARumbo(){
-        navigateTo(BASE_URL_AUT);
+    public void IngresarARumbo() {
 
+        navigateTo(BASE_URL_AUT);
     }
 
 
 }
+
