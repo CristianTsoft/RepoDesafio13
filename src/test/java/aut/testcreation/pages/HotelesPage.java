@@ -10,6 +10,8 @@ public class HotelesPage extends SeleniumWrapper {
     By btnFechaEntrada = By.xpath("//label[normalize-space()='Fecha de entrada']");
     By btnFechaSalida = By.xpath("//label[normalize-space()='Fecha de salida']");
     By btnPersona = By.xpath("//label[normalize-space()='Personas']");
+
+    By btnHabitacion = By.xpath("//button[normalize-space()='Añadir habitación']");
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
 
     public HotelesPage(WebDriver driver) {
