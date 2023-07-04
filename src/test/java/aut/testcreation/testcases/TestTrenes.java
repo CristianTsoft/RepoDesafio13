@@ -23,4 +23,17 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage.Busqueda();
         trenesresults.MasBarato();
     }
+    @Test
+    public void rt006 () throws InterruptedException {
+        homepage = new HomePage(DriverFactory.getDriver());
+        trenespage = new TrenesPage(homepage.getDriver());
+        trenesresults = new TrenesResults(homepage.getDriver());
+        homepage.navigateTo("https://www.rumbo.es");
+        homepage.noCookies();
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
+        trenespage.SoloIda();
+        trenespage.Busqueda();
+        trenesresults.SeleccionarResultado();
+    }
 }
