@@ -44,36 +44,6 @@ public class HotelesPage extends SeleniumWrapper {
         Thread.sleep(5000);
     }
 
-    public void Estrellas() throws InterruptedException {
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnEstrellas));
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(checkEstrellas));
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnAplicar));
-        Thread.sleep(2000);
-    }
 
-    public void motel() throws InterruptedException {
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnAlojamiento));
-        Thread.sleep(5000);
-    }
-
-    public void huespedes(String lugar) throws InterruptedException {
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnUbicacion));
-        Thread.sleep(5000);
-        agregarTexto(esperarPorElemento(btnUbicacion), lugar);
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnHuespedes));
-        Thread.sleep(5000);
-        for (int i = 0; i < 8; i++) {
-            clickear(esperarPorElemento(btnSumar));
-        }
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnBusqueda));
-        Thread.sleep(2000);
-    }
 
 }
