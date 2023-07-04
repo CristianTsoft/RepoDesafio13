@@ -12,6 +12,8 @@ public class HotelesPage extends SeleniumWrapper {
     By btnPersona = By.xpath("//label[normalize-space()='Personas']");
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
 
+    By btnHabitacion = By.xpath();
+
     public HotelesPage(WebDriver driver) {
         super(driver);
     }
