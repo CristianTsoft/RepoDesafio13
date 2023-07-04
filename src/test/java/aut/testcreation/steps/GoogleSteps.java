@@ -1,8 +1,6 @@
 package aut.testcreation.steps;
 
 
-import aut.testcreation.pages.Homapage;
-import aut.testcreation.pages.HomePage;
 import aut.testplan.sprint.GoogleTestsAnaRunner;
 import io.cucumber.java8.En;
 import org.junit.jupiter.api.Assertions;
