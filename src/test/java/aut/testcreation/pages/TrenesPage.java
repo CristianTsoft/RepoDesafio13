@@ -11,4 +11,6 @@ public class TrenesPage {
     By btnFechaVuelta = By.xpath("//label[normalize-space()='Fecha de vuelta']");
     By btnPasajero = By.xpath("//label[normalize-space()='Pasajero']");
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
+
+
 }
