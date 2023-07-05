@@ -28,6 +28,7 @@ public class TrenesPage extends SeleniumWrapper {
     //Métodos
 
     public void SoloIda(){
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnSoloIda));
     }
     public void Origen(){

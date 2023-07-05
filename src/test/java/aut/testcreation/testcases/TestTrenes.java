@@ -31,9 +31,11 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
         homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
         trenespage.SoloIda();
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
         trenespage.Busqueda();
-        trenesresults.SeleccionarResultado();
+        trenesresults.Unresultado();
+
+
     }
 }
