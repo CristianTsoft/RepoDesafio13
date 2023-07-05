@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class VuelosPage extends SeleniumWrapper {
     //Localizadores
     By btnSoloIda = By.xpath("//div[@class='d-1nwmwhy']");
-    By btnOrigen = By.xpath("//input[@id=':R9d96jalalaqlql2mm:']");
+    By btnOrigen = By.xpath("//input[@aria-label='Origen']");
     By btnDestino = By.xpath("//input[@id=':R9l96jalalaqlql2mm:']");
     By btnFechaIda = By.xpath("//label[normalize-space()='Fecha de ida']");
     By btnFechaVuelta = By.xpath("//label[normalize-space()='Fecha de vuelta']");
@@ -33,6 +33,8 @@ public class VuelosPage extends SeleniumWrapper {
 
     public void BusquedaSoloIda(String origen , String destino){
 
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnOrigen));
         esperarXSegundos(5000);
         agregarTexto((btnOrigen), origen);
         esperarXSegundos(5000);
