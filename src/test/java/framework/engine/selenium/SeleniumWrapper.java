@@ -116,7 +116,7 @@ public class SeleniumWrapper {
     }
 
     public WebElement esperarPorElemento(By localizador){
-        espera = new WebDriverWait(this.driver,30);
+        espera = new WebDriverWait(this.driver,60);
         return espera.until(ExpectedConditions.presenceOfElementLocated(localizador));
     }
 
