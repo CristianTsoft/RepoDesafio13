@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class TrenesResults extends SeleniumWrapper {
     //Localizadores
     By btnMasBarato = By.xpath("//h5[normalize-space()='Más barato']");
-    By btnResultado = By.xpath("//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC']");
+    By btnResultado = By.xpath("(//div[@class='FullTripCard__PaymentContainer-sc-z8znd4-3 juamvE'])[1]");
 
     public TrenesResults(WebDriver driver) {
         super(driver);
@@ -19,7 +19,7 @@ public class TrenesResults extends SeleniumWrapper {
         clickear(esperarPorElemento(btnMasBarato));
     }
     public void Unresultado (){
-        esperarXSegundos(5000);
+        esperarXSegundos(8000);
         clickear(esperarPorElemento(btnResultado));
         esperarXSegundos(10000);
     }
