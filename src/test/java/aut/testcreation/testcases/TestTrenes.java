@@ -10,11 +10,14 @@ public class TestTrenes extends SeleniumTestBase {
     private HomePage homepage;
     private TrenesPage trenespage;
     private TrenesResults trenesresults;
+    private TrenesSearch trenessearch;
+
     @BeforeEach
     public void preTest(){
         homepage = new HomePage(DriverFactory.getDriver());
         trenespage = new TrenesPage(homepage.getDriver());
         trenesresults = new TrenesResults(homepage.getDriver());
+        trenessearch = new TrenesSearch(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
@@ -24,6 +27,17 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
         //verificar que salga el mensaje de no encontrado
+    }
+
+    @Test
+    public void RT005 (){
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Barcelona", "Logroño");
+        trenesresults.SeleccionarResultado();
+        trenessearch.CambiarVentana();
+        trenessearch.Modificar("Madrid", "Sevilla");
+
+
     }
 
     @Test
