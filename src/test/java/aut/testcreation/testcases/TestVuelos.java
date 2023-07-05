@@ -13,8 +13,8 @@ public class TestVuelos extends SeleniumTestBase {
     private HomePage homepage;
     private VuelosPage vuelospage;
     private VuelosResults vuelosresults;
-
     private VuelosFlex vuelosFlex;
+    private VuelosCheckout vuelosCheckout;
 
     @BeforeEach
     public void preTest(){
@@ -22,6 +22,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage = new VuelosPage(homepage.getDriver());
         vuelosresults = new VuelosResults(homepage.getDriver());
         vuelosFlex = new VuelosFlex(homepage.getDriver());
+        vuelosCheckout = new VuelosCheckout(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
@@ -38,7 +39,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.BusquedaSoloIda("Barcelona" , "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-
+        vuelosCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","15", "enero", "1998");
     }
 
 

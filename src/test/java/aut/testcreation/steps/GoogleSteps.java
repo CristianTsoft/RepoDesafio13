@@ -10,7 +10,7 @@ public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
 
-        Homapage googleHomePage;
+
         Before(2, GoogleTestsAnaRunner::setUp);
         After(GoogleTestsAnaRunner::tearDown);
 
