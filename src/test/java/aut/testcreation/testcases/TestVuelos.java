@@ -39,6 +39,16 @@ public class TestVuelos extends SeleniumTestBase {
     }
 
     @Test
+    public void RV004 () throws InterruptedException {
+        homepage.irAVuelos();
+        vuelospage.completarOrigenDestino("Barcelona", "Roma");
+        vuelosresults.Unresultado();
+        vuelosFlex.Flexible();
+
+
+    }
+
+    @Test
     public void RV006 (){
         homepage.irAVuelos();
         vuelospage.BusquedaSoloIda("Barcelona" , "Roma");
