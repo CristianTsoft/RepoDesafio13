@@ -34,8 +34,13 @@ public class HomePage extends SeleniumWrapper {
     public void irATrenes(){
         clickear(esperarPorElemento(btnTrenes));
     }
+
+
     public void IngresarARumbo() {
+
         navigateTo(BASE_URL_AUT);
     }
+
+
 }
 
