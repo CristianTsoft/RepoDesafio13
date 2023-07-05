@@ -1,6 +1,7 @@
 package aut.testcreation.steps;
 
 
+import aut.testcreation.pages.HomePage;
 import aut.testplan.sprint.GoogleTestsAnaRunner;
 import io.cucumber.java8.En;
 import org.junit.jupiter.api.Assertions;
@@ -9,8 +10,6 @@ import org.junit.jupiter.api.Assertions;
 public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
-
-
         Before(2, GoogleTestsAnaRunner::setUp);
         After(GoogleTestsAnaRunner::tearDown);
 
