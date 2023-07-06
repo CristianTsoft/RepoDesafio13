@@ -15,28 +15,13 @@ public class HotelesResults extends SeleniumWrapper {
 
 
     By btnEstrellas = By.xpath("//div[@id='Pill-StarsContainer']");
-
-
     By checkEstrellas = By.xpath("//li[@id='exp_elem_hotel_stars_3']");
-
-
     By btnAplicar = By.xpath("//div[@class='sc-eZYOHW khSA-dJ']");
-
-
     By btnAlojamiento = By.xpath("//div[@id='Pill-PropertyTypeContainer']");
-
-
     By btnHuespedes = By.xpath("//button[@class='d-1k0nsg5']");
-
-
     By btnSumar = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
-
-
     By btnUbicacion = By.xpath("//input[@id=':R8qjalalaqlql2mm:']");
-
-
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
-
     By btnTipoHotel = By.xpath("//li[@id='exp_elem_accomodation_type_1']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
 
     By btnValoracion = By.xpath("//div[@id='Pill-RatingContainer']");
