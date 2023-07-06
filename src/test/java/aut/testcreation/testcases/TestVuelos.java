@@ -3,6 +3,7 @@ package aut.testcreation.testcases;
 import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +29,7 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
+
     @Test
     public void RV001 () {
         homepage.irAVuelos();
@@ -47,6 +49,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
+        //vuelosCheckout.completarDatos("Jorge", "Linos","");
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
         vuelosCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
@@ -58,7 +61,9 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
+        //vuelosCheckout.completarDatos();
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "2013");
+
     }
 
     //Multidestino
@@ -77,9 +82,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosFlex.Flexible();
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
     }
-
-
-    
 
 
 

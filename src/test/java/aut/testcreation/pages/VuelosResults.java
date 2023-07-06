@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 public class VuelosResults extends SeleniumWrapper {
     //Localizadores
     By btnMasBarato = By.xpath("//h5[normalize-space()='Más barato']");
-
     By btnResultado = By.xpath("//*[@id='app-container']//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTripCard__SelectedPriceContainer-sc-z8znd4-4 cbaIot']");
     By btnOrigen = By.xpath("//input[@id=':R9d96jalalaqlql2mm:']");
     By btnDestino = By.xpath("//input[@id=':R9l96jalalaqlql2mm:']");
