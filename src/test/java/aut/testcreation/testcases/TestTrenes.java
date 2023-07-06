@@ -30,13 +30,11 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.MasBarato();
     }
     @Test
-    public void rt006 () throws InterruptedException {
+    public void rt006 (){
         homepage.irATrenes();
-        trenespage.SoloIda();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenespage.Busqueda();
+        trenespage.BusquedaSoloIda("Barcelona" , "Roma");
         trenesresults.Unresultado();
-        trenesCheckout.completarDatos("Dario" , "Marconi" , "marconidarioenrique@gmail.com" , "3804556677","pichana","322","5300","La Rioja"," Javier", " Fernandez","15", "enero", "1998");
-        trenesCheckout.botonSiguiente();
+        trenesCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
+        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 }
