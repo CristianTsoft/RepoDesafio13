@@ -75,7 +75,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.BusquedaSoloIda("Barcelona" , "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        vuelosCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","15", "enero", "1998");
+        vuelosCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
     }
 
 

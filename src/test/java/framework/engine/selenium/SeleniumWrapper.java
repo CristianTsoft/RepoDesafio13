@@ -149,6 +149,21 @@ public class SeleniumWrapper {
         elemento.sendKeys(texto);
     }
 
+  /*  public void agregarNumero(WebElement elemento,String numerotxt){
+        int numero = Integer.parseInt(numerotxt);
+        elemento.sendKeys(numero);
+
+    }
+   */
+
+    public void agregarNumero(WebElement elemento, int numero) {
+        String numeroComoCadena = Integer.toString(numero);
+        elemento.sendKeys(numeroComoCadena);
+    }
+
+
+
+
     public boolean estaDesplegado(By localizador){
         try {
             return this.driver.findElement(localizador).isDisplayed();
