@@ -22,23 +22,35 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.noCookies();
     }
     @Test
-    public void RT003() {
+    public void RT003() {/*Tren - Búsqueda de viaje fallida por destino no disponible*/
         homepage.irATrenes();
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
         //verificar que salga el mensaje de no encontrado
     }
-
     @Test
-    public void RT005 (){
-        homepage.irATrenes();
-        trenespage.completarOrigenDestino("Barcelona", "Logroño");
-        trenesresults.SeleccionarResultado();
-        trenessearch.CambiarVentana();
-        trenessearch.Modificar("Madrid", "Sevilla");
-
+    public void RT004 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
 
     }
+
+    @Test
+    public void RT005 (){/*Tren - Modificación a posteriori de los valores de búsqueda*/
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
+        //trenesresults.SeleccionarResultado();
+        trenessearch.CambiarVentana();
+        trenessearch.Modificar("Madrid", "Sevilla");
+    }
+
+    @Test
+    public void RT006 (){/*Tren - Reserva de pasaje fallida por falta de datos de facturación*/
+
+    }
+
+
+
+
+
 
     @Test
     public void rt002 () {

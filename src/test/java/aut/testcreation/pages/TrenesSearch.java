@@ -10,7 +10,7 @@ public class TrenesSearch extends SeleniumWrapper {
     }
 
     //Localizadores
-    By btnModificar = By.xpath("//button[@id='modifyCSW']");
+    By btnModificar = By.xpath("/html/body/div[6]/div/div/div/div/div[1]/div[1]/div/div/div/div[1]/div/div/div/div/div[5]");
     By btnModificarFecha = By.xpath("//button[@aria-label='Fecha de entrada']");
     By btnDia14 = By.xpath("/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[10]");
 
