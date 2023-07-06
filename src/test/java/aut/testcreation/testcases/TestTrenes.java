@@ -37,6 +37,6 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage.Busqueda();
         trenesresults.Unresultado();
         trenesCheckout.completarDatos("Dario" , "Marconi" , "marconidarioenrique@gmail.com" , "3804556677","pichana","322","5300","La Rioja"," Javier", " Fernandez","15", "enero", "1998");
-
+        trenesCheckout.botonSiguiente();
     }
 }

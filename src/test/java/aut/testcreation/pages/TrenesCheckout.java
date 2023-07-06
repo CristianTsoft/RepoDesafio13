@@ -26,10 +26,10 @@ public class TrenesCheckout extends SeleniumWrapper {
     By btnAnio = By.xpath("//span[contains(text(),'Año')]");
 
     By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
-
+    By btnSiguiente = By.xpath("//button[normalize-space()='Siguiente']");
     public void completarDatos (String name, String surname, String email , String telefono, String dirPostal, String numCalle , String codePost , String city , String nameP , String surnameP ,String dia , String mes , String anio){
 
-        esperarXSegundos(20000);
+        esperarXSegundos(30000);
         agregarTexto(esperarPorElemento(btnName), name);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnSurname), surname);
@@ -62,5 +62,8 @@ public class TrenesCheckout extends SeleniumWrapper {
         esperarXSegundos(5000);
         clickear(esperarPorElemento(checkNoEquipaje));
 
+    }
+    public void botonSiguiente(){
+        clickear(esperarPorElemento(btnSiguiente));
     }
 }
