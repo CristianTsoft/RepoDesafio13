@@ -15,6 +15,7 @@ public class TestVuelos extends SeleniumTestBase {
     private VuelosResults vuelosresults;
     private VuelosFlex vuelosFlex;
     private VuelosCheckout vuelosCheckout;
+    private Multidestino multidestino;
 
     @BeforeEach
     public void preTest(){
@@ -23,6 +24,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosresults = new VuelosResults(homepage.getDriver());
         vuelosFlex = new VuelosFlex(homepage.getDriver());
         vuelosCheckout = new VuelosCheckout(homepage.getDriver());
+        multidestino = new Multidestino(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
@@ -31,6 +33,40 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.irAVuelos();
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.MasBarato();
+    }
+
+    @Test
+    public void RV002 () throws InterruptedException {
+        homepage.irAVuelos();
+        vuelosresults.pasajesMaximos("Madrid", "Buenos Aires");
+    }
+
+    //Reserva de pasaje fallida por falta de datos de facturación
+    @Test
+    public void RV003 (){
+        homepage.irAVuelos();
+        vuelospage.completarOrigenDestino("Barcelona", "Roma");
+        vuelosresults.Unresultado();
+        vuelosFlex.Flexible();
+        vuelosCheckout.completarDatos();
+    }
+
+    //Reserva de pasajes fallida por usuario menor de edad
+    @Test
+    public void RV004 (){
+        homepage.irAVuelos();
+        vuelospage.completarOrigenDestino("Barcelona", "Roma");
+        vuelosresults.Unresultado();
+        vuelosFlex.Flexible();
+        vuelosCheckout.completarDatos();
+    }
+
+    //Multidestino
+    @Test
+    public void RV005 (){
+        homepage.irAVuelos();
+        vuelospage.irAMultidestino();
+        multidestino.CompletarMultidestino();
     }
 
     @Test
