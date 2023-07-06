@@ -3,7 +3,7 @@ package aut.testcreation.pages;
 import framework.engine.selenium.SeleniumWrapper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class VuelosResults extends SeleniumWrapper {
     //Localizadores
@@ -52,7 +52,4 @@ public class VuelosResults extends SeleniumWrapper {
         Thread.sleep(2000);
 
     }
-
-
-
 }

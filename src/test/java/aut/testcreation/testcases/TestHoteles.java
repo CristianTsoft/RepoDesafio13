@@ -27,6 +27,8 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
+
+
    
     @AfterEach
     public void posTest(){
