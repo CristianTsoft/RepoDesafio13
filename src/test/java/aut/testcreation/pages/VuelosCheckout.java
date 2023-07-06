@@ -22,13 +22,17 @@ public class VuelosCheckout extends SeleniumWrapper {
     By checkSr = By.xpath("//label[@id='radio-groups.1.travellers.1.title-MALE-label']//span[@class='check']");
     By btnNameP = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By btnSurnameP = By.xpath("//input[@name='groups.1.travellers.1.surname']");
-    By btnDia = By.xpath("//span[contains(text(),'Día')]");
-    By btnMes = By.xpath("//span[contains(text(),'Mes')]");
-    By btnAnio = By.xpath("//span[contains(text(),'Año')]");
+
+    By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
+    By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[12]");
 
     By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
 
-    public void completarDatos (String name, String surname, String email , String telefono, String dirPostal, String numCalle , String codePost , String city , String nameP , String surnameP ,String dia , String mes , String anio){
+    By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
+    By mesDeNacimiento = By.xpath("(//button[@type='button'])[10]");
+    By Mes = By.xpath("(//li[@tabindex='-1'])[2]");
+
+    public void completarDatos (String name, String surname, String email , String telefono, String dirPostal, String numCalle , String codePost , String city , String nameP , String surnameP ,String dia , String anio){
 
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnName), name);
@@ -53,15 +57,20 @@ public class VuelosCheckout extends SeleniumWrapper {
         esperarXSegundos(5000);
         clickear(esperarPorElemento(checkSr));
         esperarXSegundos(5000);
-        //agregarTexto(esperarPorElemento(btnDia), dia);
+        agregarTexto(esperarPorElemento(diaDeNacimiento), dia);
         esperarXSegundos(5000);
-        //seleccionarComboBoxPortextoVisible(btnMes,mes);
-        esperarXSegundos(5000);
-        //agregarTexto(esperarPorElemento(btnAnio), anio);
+        clickear(esperarPorElemento(mesDeNacimiento));
+        esperarXSegundos(2000);
+        clickear(esperarPorElemento(Mes));
+        esperarXSegundos(2000);
+        agregarTexto(esperarPorElemento(anioDeNacimiento), anio);
         esperarXSegundos(5000);
         scrollingDownElement(esperarPorElemento(checkNoEquipaje));
         esperarXSegundos(5000);
         clickear(esperarPorElemento(checkNoEquipaje));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnNetx));
+        esperarXSegundos(5000);
 
     }
 
