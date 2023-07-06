@@ -9,8 +9,8 @@ public class TrenesPage extends SeleniumWrapper {
     //Localizadores
     By btnSoloIda = By.xpath("//div[@class='d-1nwmwhy']");
 
-    By btnOrigen = By.xpath("//input[@id=':Rmhl6lalaqlql2mm:']");
-    By btnDestino = By.xpath("//input[@id=':Rqhl6lalaqlql2mm:']");
+    By btnOrigen = By.xpath("//input[@aria-label='Origen']");
+    By btnDestino = By.xpath("//input[@aria-label='Destino']");
 
     By btnFechaIda = By.xpath("//label[normalize-space()='Fecha de ida']");
   
