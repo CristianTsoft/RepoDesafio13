@@ -15,7 +15,7 @@ public class TestTrenes extends SeleniumTestBase {
     private TrenesCheckout trenesCheckout;
 
     @BeforeEach
-    public void preTestTrenes(){
+    public void preTest(){
         homepage = new HomePage(DriverFactory.getDriver());
         trenespage = new TrenesPage(homepage.getDriver());
         trenesresults = new TrenesResults(homepage.getDriver());
@@ -30,7 +30,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.MasBarato();
     }
     @Test
-    public void rt006 () {
+    public void rt006 () throws InterruptedException {
         homepage.irATrenes();
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");

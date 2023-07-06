@@ -4,6 +4,7 @@ import aut.testcreation.pages.HomePage;
 import aut.testcreation.pages.HotelesPage;
 import aut.testcreation.pages.HotelesResults;
 import framework.engine.utils.LoadProperties;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -43,10 +44,10 @@ public class SeleniumTestBase {
     }
        */
 
- /*
+
     @AfterEach
     void close() {
         driver.quit();
     } //para cerrar la página.
-*/
+
 }
