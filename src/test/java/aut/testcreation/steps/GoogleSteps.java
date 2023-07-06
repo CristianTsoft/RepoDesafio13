@@ -10,10 +10,7 @@ import org.junit.jupiter.api.Assertions;
 public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
-<<<<<<< HEAD
 
-=======
->>>>>>> 94eaadd6a653b74a5b6b4f52b998239358e1de28
         Before(2, GoogleTestsAnaRunner::setUp);
         After(GoogleTestsAnaRunner::tearDown);
 
