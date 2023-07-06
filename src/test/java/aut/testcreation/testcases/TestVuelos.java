@@ -34,7 +34,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.MasBarato();
     }
-
     @Test
     public void RV002 () throws InterruptedException {
         homepage.irAVuelos();
@@ -48,7 +47,8 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        vuelosCheckout.completarDatos();
+        vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
+        vuelosCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 
     //Reserva de pasajes fallida por usuario menor de edad
@@ -58,7 +58,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        vuelosCheckout.completarDatos();
+        vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "2013");
     }
 
     //Multidestino

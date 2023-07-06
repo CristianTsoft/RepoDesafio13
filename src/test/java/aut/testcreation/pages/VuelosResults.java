@@ -10,9 +10,6 @@ public class VuelosResults extends SeleniumWrapper {
     By btnMasBarato = By.xpath("//h5[normalize-space()='Más barato']");
 
     By btnResultado = By.xpath("//*[@id='app-container']//div[@class='trip-collection-view__trips-container-top']//div[@class='FullTripCard__SelectedPriceContainer-sc-z8znd4-4 cbaIot']");
-    //By btnResultado = By.cssSelector("div[class='trip-collection-view__trips-container-top'] div[class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC']");
-    //By btnResultado = By.xpath("//body/div[@id='app-container']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[2]/div[5]/div[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]");
-    By btnResultado = By.cssSelector("div[class='trip-collection-view__trips-container-top'] div[class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC']");
     By btnOrigen = By.xpath("//input[@id=':R9d96jalalaqlql2mm:']");
     By btnDestino = By.xpath("//input[@id=':R9l96jalalaqlql2mm:']");
     By btnPasajeros = By.xpath("//span[normalize-space()='1 pasajero']");
