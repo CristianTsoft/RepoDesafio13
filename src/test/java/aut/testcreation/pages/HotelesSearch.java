@@ -28,9 +28,13 @@ public class HotelesSearch extends SeleniumWrapper {
         clickear(esperarPorElemento(btnModificar));
         esperarXSegundos(5000);
         clickear(esperarPorElemento(btnModificarFecha));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnDia14));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnHuespedes));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnSumar));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnBusqueda));
     }
     public void CambiarVentana(){

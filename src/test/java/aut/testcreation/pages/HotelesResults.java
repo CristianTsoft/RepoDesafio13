@@ -17,7 +17,7 @@ public class HotelesResults extends SeleniumWrapper {
     By btnEstrellas = By.xpath("//div[@id='Pill-StarsContainer']");
 
 
-    By checkEstrellas = By.xpath("//li[@id='exp_elem_hotel_stars_3']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
+    By checkEstrellas = By.xpath("//li[@id='exp_elem_hotel_stars_3']");
 
 
     By btnAplicar = By.xpath("//div[@class='sc-eZYOHW khSA-dJ']");

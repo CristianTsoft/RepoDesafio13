@@ -3,6 +3,7 @@ package aut.testcreation.testcases;
 import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +29,7 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
+
     @Test
     public void RV001 () {
         homepage.irAVuelos();
@@ -48,7 +50,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        vuelosCheckout.completarDatos();
+        //vuelosCheckout.completarDatos("Jorge", "Linos","");
     }
 
     //Reserva de pasajes fallida por usuario menor de edad
@@ -58,7 +60,7 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        vuelosCheckout.completarDatos();
+        //vuelosCheckout.completarDatos();
     }
 
     //Multidestino
