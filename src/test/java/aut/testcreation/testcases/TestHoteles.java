@@ -27,6 +27,8 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
+
+
    
     @AfterEach
     public void posTest(){
@@ -38,7 +40,6 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("Roma,Italia");
         hotelesResults.Estrellas();
-       
     }
 
     @Test

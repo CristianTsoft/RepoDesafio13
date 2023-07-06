@@ -10,7 +10,11 @@ import org.junit.jupiter.api.Assertions;
 public class GoogleSteps extends GoogleTestsAnaRunner implements En{
 
     public GoogleSteps(){
+
        Before(2, GoogleTestsAnaRunner::setUp);
+
+        Before(2, GoogleTestsAnaRunner::setUp);
+
         After(GoogleTestsAnaRunner::tearDown);
 
         Given("que estoy en el Home de Google", () -> Assertions.assertTrue(true));

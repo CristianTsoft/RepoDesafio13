@@ -47,6 +47,11 @@ public class VuelosPage extends SeleniumWrapper {
 
     }
 
+    public void irAMultidestino() {
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnMultidestino));
+    }
+
 }
 
 

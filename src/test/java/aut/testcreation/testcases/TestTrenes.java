@@ -11,7 +11,6 @@ public class TestTrenes extends SeleniumTestBase {
     private TrenesPage trenespage;
     private TrenesResults trenesresults;
     private TrenesSearch trenessearch;
-
     @BeforeEach
     public void preTest(){
         homepage = new HomePage(DriverFactory.getDriver());
@@ -28,6 +27,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
         //verificar que salga el mensaje de no encontrado
     }
+
     @Test
     public void RT004 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
 
@@ -47,11 +47,6 @@ public class TestTrenes extends SeleniumTestBase {
 
     }
 
-
-
-
-
-
     @Test
     public void rt002 () {
         homepage.irATrenes();
@@ -59,7 +54,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.MasBarato();
     }
     @Test
-    public void rt006 () {
+    public void rt006 () throws InterruptedException {
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
         trenespage.SoloIda();
