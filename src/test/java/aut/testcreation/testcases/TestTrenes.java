@@ -12,6 +12,7 @@ public class TestTrenes extends SeleniumTestBase {
     private HomePage homepage;
     private TrenesPage trenespage;
     private TrenesResults trenesresults;
+    private TrenesCheckout trenesCheckout;
 
     @BeforeEach
     public void preTest(){
@@ -23,18 +24,17 @@ public class TestTrenes extends SeleniumTestBase {
     }
     @Test
     public void rt002 () {
-
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
         trenespage.Busqueda();
         trenesresults.MasBarato();
     }
     @Test
-    public void rt006 () throws InterruptedException {
+    public void rt006 (){
         homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenespage.SoloIda();
-        trenespage.Busqueda();
-        trenesresults.SeleccionarResultado();
+        trenespage.BusquedaSoloIda("Barcelona" , "Roma");
+        trenesresults.Unresultado();
+        trenesCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
+        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 }
