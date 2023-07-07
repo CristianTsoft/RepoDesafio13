@@ -45,8 +45,6 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.irATrenes();
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
-        //verificar que salga el mensaje de no encontrado
-        //trenesresults.Mensaje();
     }
 
     @Test
@@ -62,7 +60,8 @@ public class TestTrenes extends SeleniumTestBase {
     public void RT005 (){/*Tren - Modificación a posteriori de los valores de búsqueda*/
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenessearch.Modificar("Barcelona", "Sevilla");
+        trenesresults.modificacionFiltros("Ciudad Real");
+
     }
     @Test
     public void rt006 (){
@@ -75,4 +74,16 @@ public class TestTrenes extends SeleniumTestBase {
         trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694"," Juis"," Bolivar","22","1993","44555333");
         trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
+
+    @Test
+    public void RT007 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Madrid" , "Barcelona");
+        trenesresults.Unresultado();
+        trenessearch.CambiarVentana();
+        trenesCheckout.completarDatos("Haimes","Robles","tsoftlatam@gmail.com","3804556694","Juis","Bolivar","22","1993","44533333");
+        //trenesCheckout.Facturacion("Haimes Robles","06","25","456");
+        trenesCheckout.clickNextFac();
+    }
+
 }

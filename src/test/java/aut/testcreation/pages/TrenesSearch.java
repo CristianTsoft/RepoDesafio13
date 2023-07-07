@@ -36,16 +36,24 @@ public class TrenesSearch extends SeleniumWrapper {
         CambiarVentana();
         esperarXSegundos(5000);
         clickear(esperarPorElemento(btnModificar));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnOrigenCambio));
+        esperarXSegundos(5000);
         agregarTexto((btnOrigenCambio), origen);
         esperarXSegundos(7000);
         agregarTexto((btnDestinoCambio), destino);
         esperarXSegundos(7000);
         clickear(esperarPorElemento(btnModificarFecha));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnDia14));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnPasajeros));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnSumar));
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnBusqueda));
+        esperarXSegundos(5000);
+
     }
 
 }
