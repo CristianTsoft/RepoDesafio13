@@ -32,7 +32,7 @@ public class TestTrenes extends SeleniumTestBase {
     @Test
     public void rt006 (){
         homepage.irATrenes();
-        trenespage.BusquedaSoloIda("Barcelona" , "Roma");
+        trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
         trenesresults.Unresultado();
         trenesCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
         trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");

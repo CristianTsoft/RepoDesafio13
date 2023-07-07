@@ -62,6 +62,8 @@ public class TrenesPage extends SeleniumWrapper {
         esperarXSegundos(5000);
         agregarTexto((btnOrigen), origen);
         esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnDestino));
+        esperarXSegundos(5000);
         agregarTexto((btnDestino), destino);
         esperarXSegundos(5000);
         clickear(esperarPorElemento(btnBusqueda));
