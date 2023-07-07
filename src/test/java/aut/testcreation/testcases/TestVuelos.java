@@ -35,9 +35,7 @@ public class TestVuelos extends SeleniumTestBase {
     @Test
     public void RV001 () {
         homepage.irAVuelos();
-        //Escribir origen y destino
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
-        //Hacer click en el botòn "Mas barato"
         vuelosresults.MasBarato();
     }
     @Test
@@ -53,7 +51,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        //vuelosCheckout.completarDatos("Jorge", "Linos","");
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
         vuelosCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
@@ -65,7 +62,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        //vuelosCheckout.completarDatos();
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "2013");
     }
 
