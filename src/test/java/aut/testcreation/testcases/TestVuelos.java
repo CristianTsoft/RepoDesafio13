@@ -4,6 +4,7 @@ import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -83,4 +84,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosFlex.Flexible();
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
     }
+
+
 }

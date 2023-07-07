@@ -22,36 +22,23 @@ public class HotelesResults extends SeleniumWrapper {
     By btnSumar = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
     By btnUbicacion = By.xpath("//input[@id=':R8qjalalaqlql2mm:']");
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
-    By btnTipoHotel = By.xpath("//li[@id='exp_elem_accomodation_type_1']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
-
+    By btnTipoHotel = By.xpath("//li[@id='exp_elem_accomodation_type_1']");
     By btnValoracion = By.xpath("//div[@id='Pill-RatingContainer']");
-
-    By btnExcelente = By.xpath("//li[@id='exp_elem_rating_excellent']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
-
-    By btnResultado = By.cssSelector("body > div:nth-child(1) > main:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(4) > span:nth-child(1)");
-
+    By btnExcelente = By.xpath("//li[@id='exp_elem_rating_excellent']");
     By btnServicios = By.xpath("//div[@id='Pill-FacilitiesContainer']");
+    By btnWifi = By.xpath("//li[@id='exp_elem_accomodation_facilities_0']");
+    By btnPiscina = By.xpath("id='exp_elem_accomodation_facilities_4'");
 
-    By btnWifi = By.xpath("//li[@id='exp_elem_accomodation_facilities_0']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
-
-    By btnPiscina = By.xpath("//li[@id='exp_elem_accomodation_facilities_4']//*[name()='svg']//*[name()='rect' and contains(@width,'18')]");
+    By locatorResultado = By.xpath("(//div[@class='sc-bTRovv hBqRjU'])[1]");
 
     public void Estrellas() throws InterruptedException {
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnEstrellas));
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(checkEstrellas));
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnAplicar));
-
-        Thread.sleep(2000);
-
+        esperarXSegundos(5000);
     }
 
 
@@ -66,34 +53,21 @@ public class HotelesResults extends SeleniumWrapper {
     }
 
 
-    public void huespedes(String lugar) throws InterruptedException {
+    public void huespedes(String lugar) {
 
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnUbicacion));
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnUbicacion), lugar);
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnHuespedes));
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         for (int i = 0; i < 8; i++) {
-
             clickear(esperarPorElemento(btnSumar));
-
         }
-
-        Thread.sleep(5000);
-
+        esperarXSegundos(5000);
         clickear(esperarPorElemento(btnBusqueda));
-
-        Thread.sleep(2000);
-
+        esperarXSegundos(5000);
     }
     public void Filtros() throws InterruptedException {
         //Estrellas
@@ -118,10 +92,6 @@ public class HotelesResults extends SeleniumWrapper {
         Thread.sleep(5000);
         clickear(esperarPorElemento(btnAplicar));
         Thread.sleep(2000);
-    }
-    public void SeleccionarResultado() throws InterruptedException{
-        Thread.sleep(5000);
-        clickear(esperarPorElemento(btnResultado));
     }
 
     public void Filtros2() throws InterruptedException {
@@ -149,6 +119,13 @@ public class HotelesResults extends SeleniumWrapper {
         Thread.sleep(5000);
         clickear(esperarPorElemento(btnAplicar));
         Thread.sleep(2000);
+    }
+
+    public void selecResultado(){
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(locatorResultado));
+        esperarXSegundos(5000);
+
     }
 }
 

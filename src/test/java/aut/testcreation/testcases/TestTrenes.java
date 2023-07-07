@@ -2,6 +2,7 @@ package aut.testcreation.testcases;
 import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +44,8 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
         //verificar que salga el mensaje de no encontrado
+
+
     }
 
     @Test
