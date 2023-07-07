@@ -31,6 +31,13 @@ public class TestTrenes extends SeleniumTestBase {
     }
 
     @Test
+    public void rt002 () {
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
+        trenesresults.MasBarato();
+    }
+
+    @Test
     public void RT003() {/*Tren - Búsqueda de viaje fallida por destino no disponible*/
         homepage.irATrenes();
         trenespage.SoloIda();
@@ -43,7 +50,9 @@ public class TestTrenes extends SeleniumTestBase {
          homepage.irATrenes();
          trenespage.completarOrigenDestino("Madrid" , "Barcelona");
          trenesresults.Unresultado();
+         trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694","Juis","Bolivar","22","1993","44555333");
          trenesCheckout.completarDatos("Cristian" , "Vargas" , "tsoftlatam@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
+
 
     }
 
@@ -55,14 +64,6 @@ public class TestTrenes extends SeleniumTestBase {
         trenessearch.CambiarVentana();
         trenessearch.Modificar("Madrid", "Sevilla");
     }
-
-
-    @Test
-    public void rt002 () {
-        homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenesresults.MasBarato();
-    }
     @Test
     public void rt006 (){
         homepage.irATrenes();
@@ -71,7 +72,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.SeleccionarResultado();
         trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
         trenesresults.Unresultado();
-        trenesCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
-        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
+        trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694","Juis","Bolivar","22","1993","44555333");
+        //trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 }

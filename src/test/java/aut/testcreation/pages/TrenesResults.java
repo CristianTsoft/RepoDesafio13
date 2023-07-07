@@ -7,9 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class TrenesResults extends SeleniumWrapper {
     //Localizadores
     By btnMasBarato = By.xpath("//h5[normalize-space()='Más barato']");
-
-    By btnResultado = By.xpath("(//div[@class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC'])[1]");
-
+    By btnResultado = By.xpath("(//div[@class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC'])[2]");
 
     public TrenesResults(WebDriver driver) {
         super(driver);

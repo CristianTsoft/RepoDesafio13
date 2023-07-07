@@ -23,7 +23,9 @@ public class HomePage extends SeleniumWrapper {
     //Métodos
 
     public void noCookies(){
+        esperarXSegundos(3000);
         clickear(esperarPorElemento(locatorNoCookies));
+        esperarXSegundos(3000);
     }
     public void irAVuelos(){
         clickear(esperarPorElemento(btnVuelos));

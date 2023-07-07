@@ -71,8 +71,8 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.irAVuelos();
         vuelospage.irAMultidestino();
         multidestino.CompletarMultidestino();
-        multidestino.Pasajero1("Tsoft", "Bidone", "Argentina", "Hombre", "2", "1990", "35678977");
-        multidestino.Pasajero2("Wemake", "Itreal", "Argentina", "Mujer", "2", "1990", "34886745");
+        multidestino.Pasajero1("Tsoft", "Bidone", "Argentina", "2", "Hombre","1998","33444555");
+        multidestino.Pasajero2("Webiwi","Jack","Bolivia","Mujer","2","1998","44555333");
     }
 
     @Test
