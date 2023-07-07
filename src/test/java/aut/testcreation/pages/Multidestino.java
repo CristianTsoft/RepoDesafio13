@@ -21,7 +21,7 @@ public class Multidestino extends SeleniumWrapper {
     By btnPasajeros = By.xpath("//body/div[@id='react-view']/div[@class='MainViewstyled__Container-sc-17vqwtc-0 fdeVjQ']/div[@id='SearchFormStickyBoundary']/div[@class='Box__StyledBox-sc-bvm5o6-0 iRlSkf']/div[@class='Box__StyledBox-sc-bvm5o6-0 hkCYyV']/div[@class='Stack__StyledStack-sc-53pobq-0 eQfZlS']/div[@class='Stack__StyledStack-sc-53pobq-0 lbIWRK']/div[@class='PassengersAndBagsFieldstyled__StyledPassengersField-sc-kasop6-0 jIWfvr']/div[@class='Popover__StyledPopoverChild-sc-te0bas-0 cLKCiR']/div[@class='ButtonWrapsstyled__ButtonTabletWrap-sc-zf781k-0 cCMLcD']/button[@type='button']/div[@class='ButtonPrimitiveContent__StyledButtonPrimitiveContent-sc-1nfggrh-0 cTwcGp']/div[@class='ButtonPrimitiveContentChildren__StyledButtonPrimitiveContentChildren-sc-mra4yy-0 NRXsW']/div[1]");
     By btnAñadirPasajero = By.xpath("//div[@data-test='PassengersRow-adults']//button[@aria-label='increment']//div[@class='ButtonPrimitiveIconContainer__StyledButtonPrimitiveIconContainer-sc-1bqiptv-0 fWaFsS']//*[name()='svg']");
     By btnConfirmar = By.xpath("//button[@class='ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 sKVkT']//div[@class='ButtonPrimitiveContent__StyledButtonPrimitiveContent-sc-1nfggrh-0 fgxWQF']");
-    By btnReservar = By.xpath("//div[@class='ResultCardcommonstyled__ResultCardWrapperCommon-sc-151jp81-1 ResultCardstyled__ResultCardWrapper-sc-vsw8q3-1 ikPemF kFYaLu with-shadow']//div//span[contains(text(),'Reservar')]");
+    By btnReservar = By.xpath("//div[@class='ResultCardcommonstyled__ResultCardWrapperCommon-sc-151jp81-1 ResultCardstyled__ResultCardWrapper-sc-vsw8q3-1 ikPemF kFYaLu with-shadow']//div//a[@class='ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 cbhdeA']");
     public void CambiarVentana(){
         String ventanaActual = driver.getWindowHandle();
         System.out.println("ID de la ventana actual: " + ventanaActual);
@@ -54,6 +54,7 @@ public class Multidestino extends SeleniumWrapper {
         clickear(esperarPorElemento(btnConfirmar));
         esperarXSegundos(10000);
         clickear(esperarPorElemento(btnReservar));
+
 
     }
 

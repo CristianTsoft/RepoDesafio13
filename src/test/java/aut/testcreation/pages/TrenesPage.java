@@ -8,14 +8,10 @@ public class TrenesPage extends SeleniumWrapper {
 
     //Localizadores
     By btnSoloIda = By.xpath("//div[@class='d-1nwmwhy']");
-
-    By btnOrigen = By.xpath("//input[@id=':Rmhl6lalaqlql2mm:']");
-    By btnDestino = By.xpath("//input[@id=':Rqhl6lalaqlql2mm:']");
-
+    By btnOrigen = By.xpath("//input[@aria-label='Origen']");
+    By btnDestino = By.xpath("//input[@aria-label='Destino']");
     By btnFechaIda = By.xpath("//label[normalize-space()='Fecha de ida']");
-  
     By btnFechaVuelta = By.xpath("//label[normalize-space()='Fecha de vuelta']");
-  
     By btnPasajero = By.xpath("//label[normalize-space()='Pasajero']");
 
     By btnBusqueda = By.xpath("//button[@aria-label='Buscar']");
@@ -27,9 +23,6 @@ public class TrenesPage extends SeleniumWrapper {
 
     //Métodos
 
-    public void SoloIda(){
-        clickear(esperarPorElemento(btnSoloIda));
-    }
     public void Origen(){
         clickear(esperarPorElemento(btnOrigen));
     }
@@ -60,5 +53,21 @@ public class TrenesPage extends SeleniumWrapper {
         esperarXSegundos(10000);
 
     }
+    public void BusquedaSoloIda(String origen , String destino){
 
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnSoloIda));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnOrigen));
+        esperarXSegundos(5000);
+        agregarTexto((btnOrigen), origen);
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnDestino));
+        esperarXSegundos(5000);
+        agregarTexto((btnDestino), destino);
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnBusqueda));
+        esperarXSegundos(5000);
+
+    }
 }

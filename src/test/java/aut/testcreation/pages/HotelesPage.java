@@ -13,15 +13,7 @@ public class HotelesPage extends SeleniumWrapper {
         //Localizadores
         By btnUbicacion = By.xpath("//input[@id=':R8qjalalaqlql2mm:']");
 
-        By btnFechaEntrada = By.xpath("//label[normalize-space()='Fecha de entrada']");
-
-        By btnFechaSalida = By.xpath("//label[normalize-space()='Fecha de salida']");
-
-        By btnPersona = By.xpath("//label[normalize-space()='Personas']");
-
         By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
-
-        By btnLista = By.xpath("//button[@class='sc-jPYHJC brbnpW']");
 
         By btnEstrellas = By.xpath("//div[@id='Pill-StarsContainer']");
 
