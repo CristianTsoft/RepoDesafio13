@@ -27,13 +27,17 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosCheckout = new VuelosCheckout(homepage.getDriver());
         multidestino = new Multidestino(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
+        //Cerrar el cartel de cookies
         homepage.noCookies();
+        //Hacer click en la pestaña "Vuelos"
     }
 
     @Test
     public void RV001 () {
         homepage.irAVuelos();
+        //Escribir origen y destino
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
+        //Hacer click en el botòn "Mas barato"
         vuelosresults.MasBarato();
     }
     @Test

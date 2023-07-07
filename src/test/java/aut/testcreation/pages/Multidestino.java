@@ -56,9 +56,4 @@ public class Multidestino extends SeleniumWrapper {
         clickear(esperarPorElemento(btnReservar));
     }
 
-
-
-
-
-
 }
