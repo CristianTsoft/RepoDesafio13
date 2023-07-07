@@ -21,15 +21,13 @@ public class TrenesCheckout extends SeleniumWrapper {
     By checkSr = By.xpath("//label[@id='radio-groups.1.travellers.1.title-MALE-label']//span[@class='check']");
     By btnNameP = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By btnSurnameP = By.xpath("//input[@name='groups.1.travellers.1.surname']");
-
-    By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
+    By btnNoGracias = By.xpath("(//span[@class=\"check\"])[7]");
     By btnSiguiente = By.xpath("//button[normalize-space()='Siguiente']");
     By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
     By mesDeNacimiento = By.xpath("//button[@data-testid='groups.1.travellers.1.dateOfBirth_month']");
     By Mes = By.xpath("(//li[@data-testid='menu-item'])[2]");
     By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[8]");
     By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
-    By btnNoGracias = By.xpath("//label[@class='insurance__noThanks-radio-label']//span[@class='check']");
     By btnSinAsiento = By.xpath("//button[contains(text(),'Continuar sin elegir asiento')]");
     By btnTitular = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]");
     By btnMesCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]");
@@ -86,15 +84,18 @@ public class TrenesCheckout extends SeleniumWrapper {
 
         clickear(esperarPorElemento(numDni));
         esperarXSegundos(5000);
-        //agregarTexto(esperarPorElemento(numDni),dni);
+        agregarTexto(esperarPorElemento(numDni),dni);
         esperarXSegundos(5000);
 
-        scrollingDownElement(esperarPorElemento(checkNoEquipaje));
+        scrollingDownElement(esperarPorElemento(btnNoGracias));
+        clickear(esperarPorElemento(btnNoGracias));
         esperarXSegundos(5000);
-        clickear(esperarPorElemento(checkNoEquipaje));
+        clickear(esperarPorElemento(btnSiguiente));
         esperarXSegundos(5000);
-        clickear(esperarPorElemento(btnNetx));
-        esperarXSegundos(5000);
+
+
+
+
 
     }
     public void EquipajeyServicios(){
