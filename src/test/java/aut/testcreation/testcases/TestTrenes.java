@@ -19,6 +19,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenespage = new TrenesPage(homepage.getDriver());
         trenesresults = new TrenesResults(homepage.getDriver());
         trenessearch = new TrenesSearch(homepage.getDriver());
+        trenesCheckout = new TrenesCheckout(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
@@ -42,7 +43,7 @@ public class TestTrenes extends SeleniumTestBase {
          homepage.irATrenes();
          trenespage.completarOrigenDestino("Madrid" , "Barcelona");
          trenesresults.Unresultado();
-         trenesCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
+         trenesCheckout.completarDatos("Cristian" , "Vargas" , "tsoftlatam@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
 
     }
 
