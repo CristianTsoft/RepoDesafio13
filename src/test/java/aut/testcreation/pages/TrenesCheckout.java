@@ -21,16 +21,13 @@ public class TrenesCheckout extends SeleniumWrapper {
     By checkSr = By.xpath("//label[@id='radio-groups.1.travellers.1.title-MALE-label']//span[@class='check']");
     By btnNameP = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By btnSurnameP = By.xpath("//input[@name='groups.1.travellers.1.surname']");
-    By btnDia = By.xpath("//span[contains(text(),'Día')]");
-    By btnMes = By.xpath("//span[contains(text(),'Mes')]");
-    By btnAnio = By.xpath("//span[contains(text(),'Año')]");
 
     By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
     By btnSiguiente = By.xpath("//button[normalize-space()='Siguiente']");
     By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
     By mesDeNacimiento = By.xpath("//button[@data-testid='groups.1.travellers.1.dateOfBirth_month']");
     By Mes = By.xpath("(//li[@data-testid='menu-item'])[2]");
-    By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[12]");
+    By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[8]");
     By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
     By btnNoGracias = By.xpath("//label[@class='insurance__noThanks-radio-label']//span[@class='check']");
     By btnSinAsiento = By.xpath("//button[contains(text(),'Continuar sin elegir asiento')]");
@@ -42,7 +39,7 @@ public class TrenesCheckout extends SeleniumWrapper {
 
     By locatorIdentificacion = By.xpath("//button[@data-testid='groups.1.travellers.1.documentType']");
     By locatorIdent2 = By.xpath("(//span[@class='MenuItemstyles__Label-sc-fguzn7-1 crpsZL'])[2]");
-    By numDni = By.xpath("//span[contains(text(),'Número de documento')]");
+    By numDni = By.xpath("(//label[@class='FormFieldstyles__InnerWrapper-sc-1pt5zgp-3 fUwskt'])[9]");
     public void CambiarVentana(){
         String ventanaActual = driver.getWindowHandle();
         System.out.println("ID de la ventana actual: " + ventanaActual);
@@ -86,8 +83,12 @@ public class TrenesCheckout extends SeleniumWrapper {
         esperarXSegundos(5000);
         clickear(esperarPorElemento(locatorIdent2));
         esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(numDni),dni);
+
+        clickear(esperarPorElemento(numDni));
         esperarXSegundos(5000);
+        //agregarTexto(esperarPorElemento(numDni),dni);
+        esperarXSegundos(5000);
+
         scrollingDownElement(esperarPorElemento(checkNoEquipaje));
         esperarXSegundos(5000);
         clickear(esperarPorElemento(checkNoEquipaje));

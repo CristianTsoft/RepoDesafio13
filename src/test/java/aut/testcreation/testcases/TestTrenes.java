@@ -70,7 +70,7 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.SeleccionarResultado();
         trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
         trenesresults.Unresultado();
-        //trenesCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
+        trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694","Juis","Bolivar","22","1993","44555333");
         //trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 }
