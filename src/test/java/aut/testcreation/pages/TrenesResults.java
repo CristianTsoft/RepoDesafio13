@@ -6,19 +6,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class TrenesResults extends SeleniumWrapper {
+
+    public TrenesResults(WebDriver driver) {
+        super(driver);
+    }
     //Localizadores
     By btnMasBarato = By.xpath("//h5[normalize-space()='Más barato']");
-    By btnResultado = By.xpath("(//div[@class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC'])[2]");
+    By btnResultado = By.xpath("(//div[@class='FullTransportPrices__SelectedPriceContainer-sc-1qck0l5-1 knGmgC'])[1]");
     By btnOrigen = By.xpath("//input[@aria-label='Origen']");
     By btnDestino = By.xpath("//input[@aria-label='Destino']");
     By btnPasajeros = By.xpath("//span[normalize-space()='1 pasajero']");
     By btnSumar = By.xpath("//*[name()='path' and contains(@d,'M19 13H13V')]");
     By btnBusqueda = By.xpath("//button[contains(@aria-label,'Buscar')]");
     By mensajeerror = By.cssSelector("//*[name()='path' and contains(@d,'M19 13H13V')]");
-    public TrenesResults(WebDriver driver) {
-        super(driver);
-    }
 
+
+    ///////////////  NO BORRAR   ///////////////////////////
+
+    By btnModificar = By.xpath("//span[@class='search-summary__search']");
+    By modOrigen = By.xpath("(//input[@role='combobox'])[1]");
+    By modDestino = By.xpath("(//input[@role='combobox'])[2]");
+
+    By modSoloida = By.xpath("//div[@class='css-e3uqr8-textOverflowEllipsis-ToggleGroup-ToggleGroup']");
+    By modFecha = By.xpath("//button[@class='css-1wfur8z-DateInput-styled']");
+    By modElegirFecha = By.xpath("(//button[@type='button'])[32]");
+    By modPersonas = By.xpath("//button[@class='css-tr4xm3-Dropdown-styled']");
+    By sumarPersona = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
+
+    By modBuscar = By.xpath("//div[@class='css-e3uqr8-textOverflowEllipsis-ToggleGroup-ToggleGroup']");
     //Metodos
     public void MasBarato(){
         esperarXSegundos(10000);
@@ -48,11 +63,24 @@ public class TrenesResults extends SeleniumWrapper {
         esperarXSegundos(10000);
     }
 
-    public void Mensaje(){
-        /*
-        driver.findElement(mensajeerror).isDisplayed();
-        System.out.println("El elemento está visible.");
-         */
+    public void modificacionFiltros (String origen){
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(btnModificar));
+        esperarXSegundos(5000);
+        agregarTexto(esperarPorElemento(modOrigen),origen);
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(modFecha));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(modElegirFecha));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(modPersonas));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(sumarPersona));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(modBuscar));
+        esperarXSegundos(5000);
+
     }
+
 
 }

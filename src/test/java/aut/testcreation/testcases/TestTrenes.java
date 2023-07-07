@@ -2,6 +2,7 @@ package aut.testcreation.testcases;
 import aut.testcreation.pages.*;
 import framework.engine.selenium.DriverFactory;
 import framework.engine.selenium.SeleniumTestBase;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -44,7 +45,6 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.irATrenes();
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
-        //trenesresults.Mensaje();
     }
 
     @Test
@@ -60,17 +60,19 @@ public class TestTrenes extends SeleniumTestBase {
     public void RT005 (){/*Tren - Modificación a posteriori de los valores de búsqueda*/
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenessearch.Modificar("Barcelona", "Sevilla");
+        trenesresults.modificacionFiltros("Ciudad Real");
+
     }
+
     @Test
-    public void rt006 (){
+    public void RT006 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
         homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenespage.SoloIda();
+        trenespage.completarOrigenDestino("Madrid" , "Barcelona");
         trenesresults.Unresultado();
-        trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
-        trenesresults.Unresultado();
-        trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694"," Juis"," Bolivar","22","1993","44555333");
-        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
+        trenessearch.CambiarVentana();
+        trenesCheckout.completarDatos("Haimes","Robles","tsoftlatam@gmail.com","3804556694","Juis","Bolivar","22","1993","44533333");
+        //trenesCheckout.Facturacion("Haimes Robles","06","25","456");
+        trenesCheckout.clickNextFac();
     }
+
 }

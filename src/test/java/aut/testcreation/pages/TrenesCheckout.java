@@ -14,10 +14,6 @@ public class TrenesCheckout extends SeleniumWrapper {
     By btnSurname = By.xpath("//input[@name='surname']");
     By btnEmail = By.xpath("//div[@data-testid='email']//input[@placeholder=' ']");
     By btnTelefono = By.xpath("//input[@name='phone']");
-    By btnDirPostal = By.xpath("//input[@name='address']");
-    By btnNumCalle = By.xpath("//input[@name='houseNumber']");
-    By btnCodPostal = By.xpath("//input[@name='postCode']");
-    By btnCiudad = By.xpath("//input[@name='city']");
     By checkSr = By.xpath("//label[@id='radio-groups.1.travellers.1.title-MALE-label']//span[@class='check']");
     By btnNameP = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By btnSurnameP = By.xpath("//input[@name='groups.1.travellers.1.surname']");
@@ -29,15 +25,26 @@ public class TrenesCheckout extends SeleniumWrapper {
     By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[8]");
     By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
     By btnSinAsiento = By.xpath("//button[contains(text(),'Continuar sin elegir asiento')]");
-    By btnTitular = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]");
-    By btnMesCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]");
-    By btnAnioCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[2]");
-    By btnCVV = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]");
-    By btnReservarAhora = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[11]/div[1]/div[1]/div[1]/div[1]/button[1]");
+
+    //Facturacion//
+
+    By facTitular = By.xpath("(//input[@class='form-control text-input'])[1]");
+    By facNumTarj = By.xpath("(//input[@class='form-control text-input'])[2]");
+    By facMes = By.xpath("//input[@class='form-control  css-4zmqck']");
+    By facAnio = By.xpath("//input[@class='form-control  css-ilc1su']");
+    By facCvv = By.xpath("(//input[@class='form-control text-input'])[3]");
+
+    By facNext = By.xpath("//button[@data-test='submit-button']");
+
+
+
+    ///////////////
 
     By locatorIdentificacion = By.xpath("//button[@data-testid='groups.1.travellers.1.documentType']");
     By locatorIdent2 = By.xpath("(//span[@class='MenuItemstyles__Label-sc-fguzn7-1 crpsZL'])[2]");
     By numDni = By.xpath("(//label[@class='FormFieldstyles__InnerWrapper-sc-1pt5zgp-3 fUwskt'])[9]");
+
+    By pasaporte = By.xpath("(//li[@data-testid='menu-item'])[1]");
     public void CambiarVentana(){
         String ventanaActual = driver.getWindowHandle();
         System.out.println("ID de la ventana actual: " + ventanaActual);
@@ -79,7 +86,7 @@ public class TrenesCheckout extends SeleniumWrapper {
 
         clickear(esperarPorElemento(locatorIdentificacion));
         esperarXSegundos(5000);
-        clickear(esperarPorElemento(locatorIdent2));
+        clickear(esperarPorElemento(pasaporte));
         esperarXSegundos(5000);
 
         clickear(esperarPorElemento(numDni));
@@ -108,19 +115,24 @@ public class TrenesCheckout extends SeleniumWrapper {
         esperarXSegundos(5000);
     }
 
-    public void Facturacion(String titular, String mesCaducidad, String anioCaducidad, String CVV){
-        EquipajeyServicios();
-        agregarTexto(esperarPorElemento(btnTitular), titular);
+    public void Facturacion(String titular, String mesCaducidad, String anioCaducidad, String cvv){
+
         esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnMesCad), mesCaducidad);
+        agregarTexto(esperarPorElemento(facTitular), titular);
         esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnAnioCad), anioCaducidad);
+        agregarTexto(esperarPorElemento(facMes),mesCaducidad);
         esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnCVV), CVV);
+        agregarTexto(esperarPorElemento(facAnio),anioCaducidad);
         esperarXSegundos(5000);
-        clickear(esperarPorElemento(btnReservarAhora));
+        agregarTexto(esperarPorElemento(facCvv), cvv);
         esperarXSegundos(5000);
 
+    }
+
+    public void clickNextFac(){
+        esperarXSegundos(4000);
+        clickear(esperarPorElemento(facNext));
+        esperarXSegundos(4000);
     }
 
 

@@ -59,11 +59,9 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("Madrid");
         hotelesResults.Filtros();
-        hotelesResults.SeleccionarResultado();
+        hotelesResults.selecResultado();
         hotelessearch.CambiarVentana();
         hotelessearch.Modificar();
-
-
     }
 //Hay que conseguir id Ventana
 
