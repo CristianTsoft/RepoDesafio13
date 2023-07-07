@@ -27,25 +27,22 @@ public class TrenesCheckout extends SeleniumWrapper {
 
     By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
     By btnSiguiente = By.xpath("//button[normalize-space()='Siguiente']");
-
     By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
-
-    By mesDeNacimiento = By.xpath("(//button[@type='button'])[10]");
-
-    By Mes = By.xpath("(//li[@tabindex='-1'])[2]");
-
+    By mesDeNacimiento = By.xpath("//button[@data-testid='groups.1.travellers.1.dateOfBirth_month']");
+    By Mes = By.xpath("(//li[@data-testid='menu-item'])[2]");
     By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[12]");
-
     By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
-
     By btnNoGracias = By.xpath("//label[@class='insurance__noThanks-radio-label']//span[@class='check']");
-
     By btnSinAsiento = By.xpath("//button[contains(text(),'Continuar sin elegir asiento')]");
     By btnTitular = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]");
     By btnMesCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[1]");
     By btnAnioCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[2]");
     By btnCVV = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]");
     By btnReservarAhora = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[11]/div[1]/div[1]/div[1]/div[1]/button[1]");
+
+    By locatorIdentificacion = By.xpath("//button[@data-testid='groups.1.travellers.1.documentType']");
+    By locatorIdent2 = By.xpath("(//span[@class='MenuItemstyles__Label-sc-fguzn7-1 crpsZL'])[2]");
+    By numDni = By.xpath("//span[contains(text(),'Número de documento')]");
     public void CambiarVentana(){
         String ventanaActual = driver.getWindowHandle();
         System.out.println("ID de la ventana actual: " + ventanaActual);
@@ -54,9 +51,12 @@ public class TrenesCheckout extends SeleniumWrapper {
         }
     }
 
-    public void completarDatos (String name, String surname, String email , String telefono, String dirPostal, String numCalle , String codePost , String city , String nameP , String surnameP ,String dia , String anio){
 
-        esperarXSegundos(20000);
+
+
+    public void completarDatos (String name, String surname, String email , String telefono, String nameP , String surnameP ,String dia , String anio , String dni){
+
+        esperarXSegundos(2000);
         CambiarVentana();
         agregarTexto(esperarPorElemento(btnName), name);
         esperarXSegundos(5000);
@@ -65,14 +65,6 @@ public class TrenesCheckout extends SeleniumWrapper {
         agregarTexto(esperarPorElemento(btnEmail), email);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnTelefono), telefono);
-        esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnDirPostal), dirPostal);
-        esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnNumCalle), numCalle);
-        esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnCodPostal), codePost);
-        esperarXSegundos(5000);
-        agregarTexto(esperarPorElemento(btnCiudad), city);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnNameP), nameP);
         esperarXSegundos(5000);
@@ -87,6 +79,14 @@ public class TrenesCheckout extends SeleniumWrapper {
         clickear(esperarPorElemento(Mes));
         esperarXSegundos(2000);
         agregarTexto(esperarPorElemento(anioDeNacimiento), anio);
+        esperarXSegundos(5000);
+
+
+        clickear(esperarPorElemento(locatorIdentificacion));
+        esperarXSegundos(5000);
+        clickear(esperarPorElemento(locatorIdent2));
+        esperarXSegundos(5000);
+        agregarTexto(esperarPorElemento(numDni),dni);
         esperarXSegundos(5000);
         scrollingDownElement(esperarPorElemento(checkNoEquipaje));
         esperarXSegundos(5000);
@@ -120,4 +120,6 @@ public class TrenesCheckout extends SeleniumWrapper {
         esperarXSegundos(5000);
 
     }
+
+
 }
