@@ -51,6 +51,7 @@ public class TrenesPage extends SeleniumWrapper {
         agregarTexto((btnDestino), destino);
         esperarXSegundos(10000);
         clickear(esperarPorElemento(btnBusqueda));
+        esperarXSegundos(10000);
 
     }
     public void BusquedaSoloIda(String origen , String destino){

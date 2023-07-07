@@ -23,13 +23,15 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.navigateTo("https://www.rumbo.es");
         homepage.noCookies();
     }
+
+    //Búsqueda con cantidad máxima de pasajes
     @Test
     public void rt001 () {
         homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenesresults.MasBarato();
+        trenesresults.pasajesMaximos("Madrid", "Barcelona");
     }
 
+    //Búsqueda de viaje de menor precio
     @Test
     public void rt002 () {
         homepage.irATrenes();
@@ -42,7 +44,7 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.irATrenes();
         trenespage.SoloIda();
         trenespage.completarOrigenDestino("Barcelona", "Logroño");
-        //verificar que salga el mensaje de no encontrado
+        //trenesresults.Mensaje();
     }
 
     @Test
@@ -50,6 +52,7 @@ public class TestTrenes extends SeleniumTestBase {
          homepage.irATrenes();
          trenespage.completarOrigenDestino("Madrid" , "Barcelona");
          trenesresults.Unresultado();
+         trenessearch.CambiarVentana();
          trenesCheckout.completarDatos("Haimes","Robles","tsoftlatam@gmail.com","3804556694","Juis","Bolivar","22","1993","445AB333");
     }
 
@@ -57,19 +60,17 @@ public class TestTrenes extends SeleniumTestBase {
     public void RT005 (){/*Tren - Modificación a posteriori de los valores de búsqueda*/
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenesresults.SeleccionarResultado();
-        trenessearch.CambiarVentana();
-        trenessearch.Modificar("Madrid", "Sevilla");
+        trenessearch.Modificar("Barcelona", "Sevilla");
     }
     @Test
     public void rt006 (){
         homepage.irATrenes();
-        //trenespage.completarOrigenDestino("Madrid", "Barcelona");
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
         trenespage.SoloIda();
-        trenesresults.SeleccionarResultado();
+        trenesresults.Unresultado();
         trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
         trenesresults.Unresultado();
         trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694"," Juis"," Bolivar","22","1993","44555333");
-        //trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
+        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
 }
