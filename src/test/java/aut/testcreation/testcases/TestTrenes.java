@@ -23,6 +23,13 @@ public class TestTrenes extends SeleniumTestBase {
         homepage.noCookies();
     }
     @Test
+    public void rt001 () {
+        homepage.irATrenes();
+        trenespage.completarOrigenDestino("Madrid", "Barcelona");
+        trenesresults.MasBarato();
+    }
+
+    @Test
     public void RT003() {/*Tren - Búsqueda de viaje fallida por destino no disponible*/
         homepage.irATrenes();
         trenespage.SoloIda();
@@ -32,7 +39,6 @@ public class TestTrenes extends SeleniumTestBase {
 
     @Test
     public void RT004 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
-
     }
 
     @Test
@@ -43,12 +49,6 @@ public class TestTrenes extends SeleniumTestBase {
         trenessearch.CambiarVentana();
         trenessearch.Modificar("Madrid", "Sevilla");
     }
-
-    @Test
-    public void RT006 (){/*Tren - Reserva de pasaje fallida por falta de datos de facturación*/
-
-    }
-
 
 
     @Test
