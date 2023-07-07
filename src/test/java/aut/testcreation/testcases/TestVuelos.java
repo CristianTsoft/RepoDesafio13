@@ -49,7 +49,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.Unresultado();
         vuelosFlex.Flexible();
-        //vuelosCheckout.completarDatos("Jorge", "Linos","");
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1990");
         vuelosCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
     }
