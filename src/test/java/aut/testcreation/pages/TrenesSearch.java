@@ -18,12 +18,22 @@ public class TrenesSearch extends SeleniumWrapper {
 
     By btnSumar = By.xpath("//*[name()='path' and contains(@d,'M19 13H13V')]");
 
-    By btnBusqueda = By.xpath("//button[@aria-label='Buscar']");
-    By btnOrigenCambio = By.xpath("");
-    By btnDestinoCambio = By.xpath("");
+    By btnBusqueda = By.xpath("//div[@class='css-1elrqbe-SubmitButton-styled']//*[name()='svg']");
+    By btnOrigenCambio = By.xpath("//label[@id=':r5l:-label']");
+    By btnDestinoCambio = By.xpath("//label[@id=':r5m:-label']");
 
     //Metodos
+
+    public void CambiarVentana() {
+        String ventanaActual = driver.getWindowHandle();
+        System.out.println("ID de la ventana actual: " + ventanaActual);
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+    }
+
     public void Modificar(String origen, String destino){
+        CambiarVentana();
         esperarXSegundos(5000);
         clickear(esperarPorElemento(btnModificar));
         clickear(esperarPorElemento(btnOrigenCambio));
@@ -37,12 +47,5 @@ public class TrenesSearch extends SeleniumWrapper {
         clickear(esperarPorElemento(btnSumar));
         clickear(esperarPorElemento(btnBusqueda));
     }
-    public void CambiarVentana(){
-        String ventanaActual = driver.getWindowHandle();
-        System.out.println("ID de la ventana actual: " + ventanaActual);
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
 
-}
 }
