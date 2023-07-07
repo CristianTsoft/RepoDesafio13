@@ -22,24 +22,24 @@ public class Multidestino extends SeleniumWrapper {
     By btnAñadirPasajero = By.xpath("//div[@data-test='PassengersRow-adults']//button[@aria-label='increment']//div[@class='ButtonPrimitiveIconContainer__StyledButtonPrimitiveIconContainer-sc-1bqiptv-0 fWaFsS']//*[name()='svg']");
     By btnConfirmar = By.xpath("//button[@class='ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 sKVkT']//div[@class='ButtonPrimitiveContent__StyledButtonPrimitiveContent-sc-1nfggrh-0 fgxWQF']");
     By btnReservar = By.xpath("(//a[@class=\"ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 cbhdeA\"])[1]");
-    By btnNombre1 = By.xpath("//input[@id='1-65']");
-    By btnApellido1 = By.xpath("//input[@id='1-66']");
-    By btnNacionalidad1 = By.xpath("//select[@id='1-67']");
-    By btnSexo1 = By.xpath("//select[@id='1-68']");
-    By diaDeNacimiento1 = By.name("//input[@id='1-71']");
-    By mesDeNacimiento1 = By.xpath("//select[@id='1-72']");
-    By anioDeNacimiento1 = By.xpath("//input[@id='1-73']");
-    By DNI1 = By.xpath("//input[@id='1-74']");
-    By SinCaducidad1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/fieldset[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[2]/label[1]/div[2]/span[1]");
+    By btnNombre1 = By.xpath("//input[@id='1-70']");
+    By btnApellido1 = By.xpath("//input[@id='1-71']");
+    By btnNacionalidad1 = By.xpath("//select[@id='1-72']");
+    By btnSexo1 = By.xpath("//select[@id='1-73']");
+    By diaDeNacimiento1 = By.name("(//input[@name='birthDay'])[1]");
+    By mesDeNacimiento1 = By.xpath("(//input[@name='birthMonth'])[2]");
+    By anioDeNacimiento1 = By.xpath("(//input[@name='birthYear'])[2]");
+    By DNI1 = By.xpath("//input[@id='1-79']");
+    By SinCaducidad1 = By.xpath("//div[@class='ReservationPassengers']//div[1]//div[1]//div[2]//div[1]//form[1]//fieldset[1]//div[3]//div[1]//div[2]//div[1]//div[1]//div[2]//label[1]//div[2]//span[1]");
     By SinEquipaje1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/label[1]/div[2]/span[1]");
     By SinSeguro1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[4]/div[1]/div[1]/div[3]/div[1]/label[1]/div[2]/span[1]/div[1]/div[1]/div[1]/p[1]");
-    By btnNombre2 = By.xpath("//input[@id='1-84']");
-    By btnApellido2 = By.xpath("//input[@id='1-85']");
-    By btnNacionalidad2 = By.xpath("//select[@id='1-86']");
-    By btnSexo2 = By.xpath("//select[@id='1-87']");
-    By diaDeNacimiento2 = By.name("(//input[@name='birthDay'])[1]");
-    By mesDeNacimiento2 = By.xpath("(//input[@name='birthMonth'])[1]");
-    By anioDeNacimiento2 = By.xpath("//input[@name='birthYear'])[1]");
+    By btnNombre2 = By.xpath("//input[@id='1-89']");
+    By btnApellido2 = By.xpath("//input[@id='1-90']");
+    By btnNacionalidad2 = By.xpath("//select[@id='1-91']");
+    By btnSexo2 = By.xpath("//select[@id='1-92']");
+    By diaDeNacimiento2 = By.name("(//input[@name='birthDay'])[2]");
+    By mesDeNacimiento2 = By.xpath("(//input[@name='birthMonth'])[2]");
+    By anioDeNacimiento2 = By.xpath("//input[@name='birthYear'])[2]");
     By DNI2 = By.xpath("//input[@id='1-93']");
     By SinCaducidad2 = By.xpath("//div[@class='BookingPage__BookingPageWrapper-sc-14hne6m-0 jGXxiV Reservation']//div[2]//div[1]//div[2]//div[1]//form[1]//fieldset[1]//div[3]//div[1]//div[2]//div[1]//div[1]//div[2]//label[1]//div[2]//span[1]");
     By SinEquipaje2 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/label[1]/div[2]/span[1]");
@@ -83,6 +83,7 @@ public class Multidestino extends SeleniumWrapper {
     }
 
     public void Pasajero1(String nombre, String apellido, String nacionalidad, String sexo, String dia, String anio, String dni) {
+        esperarXSegundos(10000);
         agregarTexto(esperarPorElemento(btnNombre1), nombre);
         agregarTexto(esperarPorElemento(btnApellido1), apellido);
         seleccionarComboBoxPortextoVisible(btnNacionalidad1, nacionalidad);
