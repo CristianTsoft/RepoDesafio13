@@ -26,7 +26,7 @@ public class VuelosCheckout extends SeleniumWrapper {
     By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
     By anioDeNacimiento = By.xpath("(//input[@data-testid='input-input'])[12]");
 
-    By checkNoEquipaje = By.xpath("//div[contains(@class,'css-1xxax3')]//span[@class='check']");
+    By checkNoEquipaje = By.xpath("(//span[@class='check'])[5]");
 
     By btnNetx = By.xpath("//button[normalize-space()='Siguiente']");
     By mesDeNacimiento = By.xpath("(//button[@type='button'])[10]");
@@ -72,9 +72,9 @@ public class VuelosCheckout extends SeleniumWrapper {
         esperarXSegundos(2000);
         agregarTexto(esperarPorElemento(anioDeNacimiento), anio);
         esperarXSegundos(5000);
-        scrollingDownElement(esperarPorElemento(checkNoEquipaje));
-        esperarXSegundos(5000);
-        clickear(esperarPorElemento(checkNoEquipaje));
+        //scrollingDownElement(esperarPorElemento(checkNoEquipaje));
+        //esperarXSegundos(5000);
+        //clickear(esperarPorElemento(checkNoEquipaje));
         esperarXSegundos(5000);
         clickear(esperarPorElemento(btnNetx));
         esperarXSegundos(5000);
