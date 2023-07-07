@@ -44,10 +44,10 @@ public class SeleniumTestBase {
     }
        */
 
-
+/*
     @AfterEach
     void close() {
         driver.quit();
     } //para cerrar la página.
-
+*/
 }

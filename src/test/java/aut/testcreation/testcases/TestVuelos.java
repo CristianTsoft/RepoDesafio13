@@ -67,7 +67,6 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosFlex.Flexible();
         //vuelosCheckout.completarDatos();
         vuelosCheckout.completarDatos("Cristian" , "Vargas" , "cristian.vargas@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "2013");
-
     }
 
     //Multidestino
@@ -76,6 +75,8 @@ public class TestVuelos extends SeleniumTestBase {
         homepage.irAVuelos();
         vuelospage.irAMultidestino();
         multidestino.CompletarMultidestino();
+        multidestino.Pasajero1("Tsoft", "Bidone", "Argentina", "Hombre", "2", "1990", "35678977");
+        multidestino.Pasajero2("Wemake", "Itreal", "Argentina", "Mujer", "34886745");
     }
 
     @Test
