@@ -51,6 +51,8 @@ public class TestTrenes extends SeleniumTestBase {
          trenespage.completarOrigenDestino("Madrid" , "Barcelona");
          trenesresults.Unresultado();
          trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694","Juis","Bolivar","22","1993","44555333");
+         trenesCheckout.completarDatos("Cristian" , "Vargas" , "tsoftlatam@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
+
 
     }
 
