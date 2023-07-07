@@ -27,7 +27,7 @@ public class HotelesResults extends SeleniumWrapper {
     By btnExcelente = By.xpath("//li[@id='exp_elem_rating_excellent']");
     By btnServicios = By.xpath("//div[@id='Pill-FacilitiesContainer']");
     By btnWifi = By.xpath("//li[@id='exp_elem_accomodation_facilities_0']");
-    By btnPiscina = By.xpath("id='exp_elem_accomodation_facilities_4'");
+    By btnPiscina = By.xpath("(//li[@role='option'])[2]");
 
     By locatorResultado = By.xpath("(//div[@class='sc-bTRovv hBqRjU'])[1]");
 
@@ -96,7 +96,7 @@ public class HotelesResults extends SeleniumWrapper {
 
     public void Filtros2() throws InterruptedException {
         //Estrellas
-        Thread.sleep(20000);
+        Thread.sleep(6000);
         Estrellas();
         //Tipo de alojamiento
 

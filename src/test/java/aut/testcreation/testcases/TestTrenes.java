@@ -63,20 +63,9 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.modificacionFiltros("Ciudad Real");
 
     }
-    @Test
-    public void rt006 (){
-        homepage.irATrenes();
-        trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        trenespage.SoloIda();
-        trenesresults.Unresultado();
-        trenespage.BusquedaSoloIda("Madrid" , "Barcelona");
-        trenesresults.Unresultado();
-        trenesCheckout.completarDatos("Haimes","Robles","Haimesrobles@gmail.com","3804556694"," Juis"," Bolivar","22","1993","44555333");
-        trenesCheckout.Facturacion("Cristian Vargas", "03", "25", "666");
-    }
 
     @Test
-    public void RT007 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
+    public void RT006 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid" , "Barcelona");
         trenesresults.Unresultado();
