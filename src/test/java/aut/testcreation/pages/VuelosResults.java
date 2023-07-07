@@ -27,7 +27,7 @@ public class VuelosResults extends SeleniumWrapper {
 
     public void Unresultado (){
         clickear(esperarPorElemento(btnResultado));
-        esperarXSegundos(30000);
+        esperarXSegundos(5000);
     }
 
     public void pasajesMaximos(String origen, String destino) throws InterruptedException {
