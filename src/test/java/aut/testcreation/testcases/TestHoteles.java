@@ -40,7 +40,6 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("Roma,Italia");
         hotelesResults.Estrellas();
-       
     }
 
     @Test

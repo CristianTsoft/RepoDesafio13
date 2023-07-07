@@ -22,7 +22,9 @@ public class TrenesPage extends SeleniumWrapper {
     }
 
     //Métodos
-
+    public void SoloIda(){
+        clickear(esperarPorElemento(btnSoloIda));
+    }
     public void Origen(){
         clickear(esperarPorElemento(btnOrigen));
     }
@@ -38,9 +40,6 @@ public class TrenesPage extends SeleniumWrapper {
     public void Pasajero(){
         clickear(esperarPorElemento(btnPasajero));
     }
-    public void Busqueda(){
-        clickear(esperarPorElemento(btnBusqueda));
-    }
 
     public void completarOrigenDestino(String origen,String destino){
         esperarXSegundos(7000);
@@ -51,6 +50,7 @@ public class TrenesPage extends SeleniumWrapper {
         esperarXSegundos(7000);
         agregarTexto((btnDestino), destino);
         esperarXSegundos(10000);
+        clickear(esperarPorElemento(btnBusqueda));
 
     }
     public void BusquedaSoloIda(String origen , String destino){

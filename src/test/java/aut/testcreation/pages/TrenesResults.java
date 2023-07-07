@@ -21,7 +21,10 @@ public class TrenesResults extends SeleniumWrapper {
         esperarXSegundos(10000);
         clickear(esperarPorElemento(btnMasBarato));
     }
-    public void Unresultado (){
+    public void SeleccionarResultado() {
+        esperarXSegundos(5000);
+    }
+    public void Unresultado(){
         esperarXSegundos(8000);
         clickear(esperarPorElemento(btnResultado));
         esperarXSegundos(10000);

@@ -46,9 +46,18 @@ public class TrenesCheckout extends SeleniumWrapper {
     By btnAnioCad = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[1]/input[2]");
     By btnCVV = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[8]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]");
     By btnReservarAhora = By.xpath("//body/div[@id='root']/div[1]/div[3]/div[1]/div[1]/div[2]/div[11]/div[1]/div[1]/div[1]/div[1]/button[1]");
+    public void CambiarVentana(){
+        String ventanaActual = driver.getWindowHandle();
+        System.out.println("ID de la ventana actual: " + ventanaActual);
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+    }
+
     public void completarDatos (String name, String surname, String email , String telefono, String dirPostal, String numCalle , String codePost , String city , String nameP , String surnameP ,String dia , String anio){
 
-        esperarXSegundos(5000);
+        esperarXSegundos(20000);
+        CambiarVentana();
         agregarTexto(esperarPorElemento(btnName), name);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(btnSurname), surname);
