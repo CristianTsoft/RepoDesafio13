@@ -58,9 +58,4 @@ public class Multidestino extends SeleniumWrapper {
 
     }
 
-
-
-
-
-
 }
