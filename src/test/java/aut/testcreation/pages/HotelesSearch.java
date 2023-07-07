@@ -15,7 +15,7 @@ public class HotelesSearch extends SeleniumWrapper {
     //Localizadores
     By btnModificar = By.xpath("//button[@id='modifyCSW']");
     By btnModificarFecha = By.xpath("//button[@aria-label='Fecha de entrada']");
-    By btnDia14 = By.xpath("/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[10]");
+    By btnDia14 = By.xpath("(//button[@type='button'])[27]);");
 
     By btnHuespedes = By.xpath("//button[@class='css-ecd3q7-Dropdown-styled']");
 

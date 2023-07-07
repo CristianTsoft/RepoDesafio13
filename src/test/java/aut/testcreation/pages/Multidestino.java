@@ -10,6 +10,8 @@ public class Multidestino extends SeleniumWrapper {
         super(driver);
     }
 
+    //No llegamos. Xpath por revisar.
+
     By btnDestino1 = By.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
     By btnDestino2 = By.xpath("/html[1]/body[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]");
     By btnOpcionDestino = By.xpath("//div[contains(text(),'Madrid, España')]");

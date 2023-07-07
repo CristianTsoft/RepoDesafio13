@@ -71,7 +71,6 @@ public class TestTrenes extends SeleniumTestBase {
         trenesresults.Unresultado();
         trenessearch.CambiarVentana();
         trenesCheckout.completarDatos("Haimes","Robles","tsoftlatam@gmail.com","3804556694","Juis","Bolivar","22","1993","44533333");
-        //trenesCheckout.Facturacion("Haimes Robles","06","25","456");
         trenesCheckout.clickNextFac();
     }
 

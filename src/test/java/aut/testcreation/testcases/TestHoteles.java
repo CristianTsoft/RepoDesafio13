@@ -28,13 +28,12 @@ public class TestHoteles extends SeleniumTestBase {
         homepage.noCookies();
     }
 
-
-   
     @AfterEach
     public void posTest(){
         // driver.close();
     }
 
+    // Búsqueda de hoteles 3 estrellas
     @Test
     public void rh001 () throws InterruptedException {
         homepage.irAHoteles();
@@ -42,6 +41,7 @@ public class TestHoteles extends SeleniumTestBase {
         hotelesResults.Estrellas();
     }
 
+    // Búsqueda de motel
     @Test
     public void rh002 () throws InterruptedException {
         homepage.irAHoteles();
@@ -49,11 +49,14 @@ public class TestHoteles extends SeleniumTestBase {
         hotelesResults.motel();
     }
 
+    // Búsqueda con cantidad máxima de huespedes por habitación
     @Test
     public void rh003 () throws InterruptedException {
         homepage.irAHoteles();
         hotelesResults.huespedes("Roma,Italia");
     }
+
+    // Modificación a posteriori de los valores de búsqueda
     @Test
     public void rh004 () throws InterruptedException {
         homepage.irAHoteles();
@@ -63,14 +66,16 @@ public class TestHoteles extends SeleniumTestBase {
         hotelessearch.CambiarVentana();
         hotelessearch.Modificar();
     }
-//Hay que conseguir id Ventana
 
+    // Búsqueda avanzada con 3 filtros
     @Test
     public void rh005 () throws InterruptedException {
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("Madrid");
         hotelesResults.Filtros2();
     }
+
+    // Búsqueda avanzada con cantidad máxima de habitaciones
     @Test
     public void rh006 () throws InterruptedException {
         homepage.irAHoteles();

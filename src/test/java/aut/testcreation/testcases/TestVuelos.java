@@ -28,17 +28,17 @@ public class TestVuelos extends SeleniumTestBase {
         vuelosCheckout = new VuelosCheckout(homepage.getDriver());
         multidestino = new Multidestino(homepage.getDriver());
         homepage.navigateTo("https://www.rumbo.es");
-        //Cerrar el cartel de cookies
         homepage.noCookies();
-        //Hacer click en la pestaña "Vuelos"
     }
 
+    //Búsqueda de viajes de menor duración
     @Test
     public void RV001 () {
         homepage.irAVuelos();
         vuelospage.completarOrigenDestino("Barcelona", "Roma");
         vuelosresults.MasBarato();
     }
+    //Búsqueda con cantidad máxima pasajes
     @Test
     public void RV002 () throws InterruptedException {
         homepage.irAVuelos();
@@ -76,6 +76,8 @@ public class TestVuelos extends SeleniumTestBase {
         multidestino.Pasajero2("Webiwi","Jack","Bolivia","Mujer","2","1998","44555333");
     }
 
+
+    //Reserva de pasajes fallida por e-mail inválido
     @Test
     public void RV006 (){
         homepage.irAVuelos();

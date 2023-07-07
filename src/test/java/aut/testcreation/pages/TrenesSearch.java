@@ -10,14 +10,13 @@ public class TrenesSearch extends SeleniumWrapper {
     }
 
     //Localizadores
-    By btnModificar = By.xpath("/html/body/div[6]/div/div/div/div/div[1]/div[1]/div/div/div/div[1]/div/div/div/div/div[5]");
+    By btnModificar = By.xpath("//div[@class='search-summary__section search-summary__section--search']");
     By btnModificarFecha = By.xpath("//button[@aria-label='Fecha de entrada']");
-    By btnDia14 = By.xpath("/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[2]/button[10]");
+    By btnDia14 = By.xpath("(//button[@type='button'])[27]");
 
     By btnPasajeros = By.xpath("//button[@class='css-ecd3q7-Dropdown-styled']");
 
     By btnSumar = By.xpath("//*[name()='path' and contains(@d,'M19 13H13V')]");
-
     By btnBusqueda = By.xpath("//div[@class='css-1elrqbe-SubmitButton-styled']//*[name()='svg']");
     By btnOrigenCambio = By.xpath("//label[@id=':r5l:-label']");
     By btnDestinoCambio = By.xpath("//label[@id=':r5m:-label']");

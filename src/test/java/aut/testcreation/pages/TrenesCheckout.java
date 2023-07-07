@@ -17,7 +17,7 @@ public class TrenesCheckout extends SeleniumWrapper {
     By checkSr = By.xpath("//label[@id='radio-groups.1.travellers.1.title-MALE-label']//span[@class='check']");
     By btnNameP = By.xpath("//input[@name='groups.1.travellers.1.name']");
     By btnSurnameP = By.xpath("//input[@name='groups.1.travellers.1.surname']");
-    By btnNoGracias = By.xpath("(//span[@class=\"check\"])[7]");
+    By btnNoGracias = By.xpath("(//span[@class='check'])[7]");
     By btnSiguiente = By.xpath("//button[normalize-space()='Siguiente']");
     By diaDeNacimiento = By.name("groups.1.travellers.1.dateOfBirth");
     By mesDeNacimiento = By.xpath("//button[@data-testid='groups.1.travellers.1.dateOfBirth_month']");
