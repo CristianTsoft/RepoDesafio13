@@ -39,13 +39,18 @@ public class TestTrenes extends SeleniumTestBase {
 
     @Test
     public void RT004 (){/*Tren - Reserva fallida de pasaje por DNI alfanumérico*/
+         homepage.irATrenes();
+         trenespage.completarOrigenDestino("Madrid" , "Barcelona");
+         trenesresults.Unresultado();
+         trenesCheckout.completarDatos("Cristian" , "Vargas" , "##%%@gmail.com" , "3804556677","Callao","350","5300","La Rioja"," Javier", " Fernandez","14", "1998");
+
     }
 
     @Test
     public void RT005 (){/*Tren - Modificación a posteriori de los valores de búsqueda*/
         homepage.irATrenes();
         trenespage.completarOrigenDestino("Madrid", "Barcelona");
-        //trenesresults.SeleccionarResultado();
+        trenesresults.SeleccionarResultado();
         trenessearch.CambiarVentana();
         trenessearch.Modificar("Madrid", "Sevilla");
     }
