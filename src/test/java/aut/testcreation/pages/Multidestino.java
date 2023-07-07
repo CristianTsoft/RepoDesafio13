@@ -100,11 +100,17 @@ public class Multidestino extends SeleniumWrapper {
         clickear(esperarPorElemento(SinEquipaje1));
         clickear(esperarPorElemento(SinSeguro1));
     }
-    public void Pasajero2(String nombre, String apellido, String nacionalidad, String sexo, String dni) {
+    public void Pasajero2(String nombre, String apellido, String nacionalidad, String sexo, String dia, String anio, String dni) {
         agregarTexto(esperarPorElemento(btnNombre2), nombre);
         agregarTexto(esperarPorElemento(btnApellido2), apellido);
         seleccionarComboBoxPortextoVisible(btnNacionalidad2, nacionalidad);
         seleccionarComboBoxPortextoVisible(btnSexo2, sexo);
+        esperarXSegundos(5000);
+        agregarTexto(esperarPorElemento(diaDeNacimiento2), dia);
+        esperarXSegundos(5000);
+        seleccionarComboBoxPortextoVisible(mesDeNacimiento2, "Abril");
+        esperarXSegundos(2000);
+        agregarTexto(esperarPorElemento(anioDeNacimiento2), anio);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(DNI2), dni);
         esperarXSegundos(5000);
