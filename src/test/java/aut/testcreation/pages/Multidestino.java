@@ -19,25 +19,26 @@ public class Multidestino extends SeleniumWrapper {
     By btnPasajeros = By.xpath("//body/div[@id='react-view']/div[@class='MainViewstyled__Container-sc-17vqwtc-0 fdeVjQ']/div[@id='SearchFormStickyBoundary']/div[@class='Box__StyledBox-sc-bvm5o6-0 iRlSkf']/div[@class='Box__StyledBox-sc-bvm5o6-0 hkCYyV']/div[@class='Stack__StyledStack-sc-53pobq-0 eQfZlS']/div[@class='Stack__StyledStack-sc-53pobq-0 lbIWRK']/div[@class='PassengersAndBagsFieldstyled__StyledPassengersField-sc-kasop6-0 jIWfvr']/div[@class='Popover__StyledPopoverChild-sc-te0bas-0 cLKCiR']/div[@class='ButtonWrapsstyled__ButtonTabletWrap-sc-zf781k-0 cCMLcD']/button[@type='button']/div[@class='ButtonPrimitiveContent__StyledButtonPrimitiveContent-sc-1nfggrh-0 cTwcGp']/div[@class='ButtonPrimitiveContentChildren__StyledButtonPrimitiveContentChildren-sc-mra4yy-0 NRXsW']/div[1]");
     By btnAñadirPasajero = By.xpath("//div[@data-test='PassengersRow-adults']//button[@aria-label='increment']//div[@class='ButtonPrimitiveIconContainer__StyledButtonPrimitiveIconContainer-sc-1bqiptv-0 fWaFsS']//*[name()='svg']");
     By btnConfirmar = By.xpath("//button[@class='ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 sKVkT']//div[@class='ButtonPrimitiveContent__StyledButtonPrimitiveContent-sc-1nfggrh-0 fgxWQF']");
+
     By btnReservar = By.xpath("(//a[@class='ButtonPrimitive__StyledButtonPrimitive-sc-j8pavp-0 cbhdeA'])[1]");
-    By btnNombre1 = By.xpath("//input[@id='1-65']");
-    By btnApellido1 = By.xpath("//input[@id='1-66']");
-    By btnNacionalidad1 = By.xpath("//select[@id='1-67']");
-    By btnSexo1 = By.xpath("//select[@id='1-68']");
-    By diaDeNacimiento1 = By.name("//input[@id='1-71']");
-    By mesDeNacimiento1 = By.xpath("//select[@id='1-72']");
-    By anioDeNacimiento1 = By.xpath("//input[@id='1-73']");
-    By DNI1 = By.xpath("//input[@id='1-74']");
+    By btnNombre1 = By.xpath("//input[@name='firstname']");
+    By btnApellido1 = By.xpath("//input[@name='lastname']");
+    By btnNacionalidad1 = By.xpath("//select[@name='nationality']");
+    By btnSexo1 = By.xpath("(//select[@class='Select__StyledSelect-sc-2ijy2y-3 jIVydg'])[2]");
+    By diaDeNacimiento1 = By.name("//input[@name='birthDay']");
+    By mesDeNacimiento1 = By.xpath("(//select[@data-test='month'])[1]");
+    By anioDeNacimiento1 = By.xpath("//input[@name='birthYear']");
+    By DNI1 = By.xpath("//input[@name='idNumber']");
     By SinCaducidad1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/fieldset[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[2]/label[1]/div[2]/span[1]");
     By SinEquipaje1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/label[1]/div[2]/span[1]");
     By SinSeguro1 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[4]/div[1]/div[1]/div[3]/div[1]/label[1]/div[2]/span[1]/div[1]/div[1]/div[1]/p[1]");
-    By btnNombre2 = By.xpath("//input[@id='1-84']");
-    By btnApellido2 = By.xpath("//input[@id='1-85']");
-    By btnNacionalidad2 = By.xpath("//select[@id='1-86']");
-    By btnSexo2 = By.xpath("//select[@id='1-87']");
-    By diaDeNacimiento2 = By.name("(//input[@name='birthDay'])[1]");
-    By mesDeNacimiento2 = By.xpath("(//input[@name='birthMonth'])[1]");
-    By anioDeNacimiento2 = By.xpath("//input[@name='birthYear'])[1]");
+    By btnNombre2 = By.xpath("//input[@id='1-89']");
+    By btnApellido2 = By.xpath("//input[@id='1-90']");
+    By btnNacionalidad2 = By.xpath("//select[@id='1-91']");
+    By btnSexo2 = By.xpath("//select[@id='1-92']");
+    By diaDeNacimiento2 = By.name("(//input[@name='birthDay'])[2]");
+    By mesDeNacimiento2 = By.xpath("(//input[@name='birthMonth'])[2]");
+    By anioDeNacimiento2 = By.xpath("//input[@name='birthYear'])[2]");
     By DNI2 = By.xpath("//input[@id='1-93']");
     By SinCaducidad2 = By.xpath("//div[@class='BookingPage__BookingPageWrapper-sc-14hne6m-0 jGXxiV Reservation']//div[2]//div[1]//div[2]//div[1]//form[1]//fieldset[1]//div[3]//div[1]//div[2]//div[1]//div[1]//div[2]//label[1]//div[2]//span[1]");
     By SinEquipaje2 = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[1]/form[1]/div[1]/div[2]/div[4]/div[1]/label[1]/div[2]/span[1]");
@@ -81,11 +82,14 @@ public class Multidestino extends SeleniumWrapper {
         esperarXSegundos(10000);
     }
 
-    public void Pasajero1 (String nombre, String apellido, String nacionalidad, String sexo, String dia, String anio, String dni) {
+
+    public void Pasajero1(String nombre, String apellido, String nacionalidad, String dia,String sexo, String anio, String dni) {
+        esperarXSegundos(10000);
         agregarTexto(esperarPorElemento(btnNombre1), nombre);
         agregarTexto(esperarPorElemento(btnApellido1), apellido);
         seleccionarComboBoxPortextoVisible(btnNacionalidad1, nacionalidad);
-        seleccionarComboBoxPortextoVisible(btnSexo1, sexo);
+        esperarXSegundos(5000);
+        //seleccionarComboBoxPortextoVisible(btnSexo1,sexo);
         esperarXSegundos(5000);
         agregarTexto(esperarPorElemento(diaDeNacimiento1), dia);
         esperarXSegundos(5000);
